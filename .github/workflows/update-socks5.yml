@@ -23,7 +23,7 @@ jobs:
           node-version: "22"
       - name: Fetch, check and rank public SOCKS5 nodes
         env:
-          MAX_CANDIDATES: "300"
+          MAX_CANDIDATES: "500"
           MAX_RESULTS: "100"
           CONCURRENCY: "16"
           TIMEOUT_MS: "35000"

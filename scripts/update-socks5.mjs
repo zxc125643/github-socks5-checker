@@ -230,7 +230,9 @@ const successful = checked
 const preferred = successful.filter((item) =>
   !item.flags.bogon && !item.flags.tor && !item.flags.vpn && !item.flags.datacenter
 );
-const freshSelection = (preferred.length ? preferred : successful).slice(0, MAX_RESULTS);
+const preferredSet = new Set(preferred.map((item) => item.proxy));
+const fallback = successful.filter((item) => !preferredSet.has(item.proxy));
+const freshSelection = [...preferred, ...fallback].slice(0, MAX_RESULTS);
 const selected = freshSelection.length
   ? freshSelection
   : previous.slice(0, MAX_RESULTS).map((item) => ({ ...item, retainedFromPreviousRun: true }));
