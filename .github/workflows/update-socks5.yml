@@ -15,7 +15,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,9 +23,9 @@ jobs:
           node-version: "22"
       - name: Fetch, check and rank public SOCKS5 nodes
         env:
-          MAX_CANDIDATES: "500"
+          MAX_CANDIDATES: "2000"
           MAX_RESULTS: "100"
-          CONCURRENCY: "16"
+          CONCURRENCY: "24"
           TIMEOUT_MS: "35000"
         run: node scripts/update-socks5.mjs
       - name: Commit refreshed data
