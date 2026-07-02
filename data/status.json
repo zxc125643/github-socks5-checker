@@ -1,12 +1,46 @@
 {
-  "updatedAt": "2026-07-02T06:17:50.860Z",
+  "updatedAt": "2026-07-02T09:23:03.766Z",
   "checker": "https://check.socks5.cmliussss.net",
   "sources": 4,
-  "fetched": 10750,
-  "uniqueCandidates": 6223,
-  "checked": 2000,
-  "successful": 459,
-  "preferred": 98,
-  "published": 100,
+  "fetched": 12134,
+  "uniqueCandidates": 7689,
+  "checked": 1200,
+  "successful": 39,
+  "remoteFailures": 998,
+  "localFailures": 163,
+  "failureReasons": {
+    "local_validation_failed": 163,
+    "SOCKS5 proxy connection timed out": 324,
+    "proxy request failed, cannot connect to the specified address": 272,
+    "Cannot call releaseLock() on a reader with outstanding read promises.": 3,
+    "SOCKS5 authentication negotiation timed out": 43,
+    "SOCKS5 unsupported auth method: 255": 54,
+    "proxy request failed, cannot connect to the specified address. It looks like you": 2,
+    "checker_request_failed": 179,
+    "SOCKS5 method selection failed": 39,
+    "Proxy connection timed out": 50,
+    "SOCKS5 CONNECT timed out": 15,
+    "SOCKS5 unsupported auth method: 84": 11,
+    "Connection closed waiting for ServerHello": 2,
+    "SOCKS5 connection failed: closed": 1,
+    "Target returned no data": 1,
+    "Network connection lost.": 1,
+    "SOCKS5 connection failed: 2": 1
+  },
+  "preferred": 3,
+  "locallyValidated": true,
+  "localTargets": [
+    "https://www.gstatic.com/generate_204",
+    "https://www.cloudflare.com/cdn-cgi/trace"
+  ],
+  "localRequiredSuccesses": 2,
+  "minPurityScore": 4.2,
+  "publishOnlyClean": false,
+  "purity": {
+    "clean": 3,
+    "dirty": 36
+  },
+  "clean": 3,
+  "published": 39,
   "retainedPrevious": false
 }

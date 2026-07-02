@@ -1,5 +1,7 @@
 import { createHash } from "node:crypto";
+import { execFile as execFileCallback } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { promisify } from "node:util";
 
 const CHECKER_URL = process.env.CHECKER_URL || "https://check.socks5.cmliussss.net";
 const MAX_CANDIDATES = positiveInt(process.env.MAX_CANDIDATES, 300);
@@ -8,14 +10,37 @@ const CONCURRENCY = positiveInt(process.env.CONCURRENCY, 16);
 const TIMEOUT_MS = positiveInt(process.env.TIMEOUT_MS, 35_000);
 const MAX_LATENCY_MS = positiveInt(process.env.MAX_LATENCY_MS, 15_000);
 const RETEST_PREVIOUS = positiveInt(process.env.RETEST_PREVIOUS, 60);
+const LOCAL_CHECK = envBool("LOCAL_CHECK", true);
+const LOCAL_TIMEOUT_MS = positiveInt(process.env.LOCAL_TIMEOUT_MS, 10_000);
+const LOCAL_MAX_LATENCY_MS = positiveInt(process.env.LOCAL_MAX_LATENCY_MS, 8_000);
+const LOCAL_REQUIRED_SUCCESSES = positiveInt(process.env.LOCAL_REQUIRED_SUCCESSES, 2);
+const MIN_PURITY_SCORE = envFloat("MIN_PURITY_SCORE", 4.2);
+const PUBLISH_ONLY_CLEAN = envBool("PUBLISH_ONLY_CLEAN", false);
+const RETAIN_PREVIOUS_ON_EMPTY = envBool("RETAIN_PREVIOUS_ON_EMPTY", false);
+const LOCAL_TEST_TARGETS = parseTargets(process.env.LOCAL_TEST_TARGETS || [
+  "https://www.gstatic.com/generate_204=204",
+  "https://www.cloudflare.com/cdn-cgi/trace=200",
+].join(","));
 const EXTRA_CANDIDATES = String(process.env.EXTRA_CANDIDATES || "")
   .split(/[\s,]+/)
   .map(normalizeProxy)
   .filter(Boolean);
+const execFile = promisify(execFileCallback);
 
 function positiveInt(value, fallback) {
   const parsed = Number.parseInt(value || "", 10);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function envFloat(name, fallback) {
+  const parsed = Number.parseFloat(process.env[name] || "");
+  return Number.isFinite(parsed) ? parsed : fallback;
+}
+
+function envBool(name, fallback = false) {
+  const value = process.env[name];
+  if (value == null || value === "") return fallback;
+  return ["1", "true", "yes", "y", "on"].includes(String(value).trim().toLowerCase());
 }
 
 function normalizeProxy(value) {
@@ -39,6 +64,31 @@ function normalizeProxy(value) {
   }
 }
 
+function parseTargets(raw) {
+  return String(raw || "")
+    .split(/[\s,]+/)
+    .map((entry) => entry.trim())
+    .filter(Boolean)
+    .map((entry) => {
+      const statusMatch = entry.match(/=(\d{3}(?:[|/;+]\d{3})*)$/);
+      const urlText = statusMatch ? entry.slice(0, statusMatch.index) : entry;
+      const statusText = statusMatch?.[1];
+      const url = new URL(urlText);
+      if (!["http:", "https:"].includes(url.protocol)) {
+        throw new Error(`Unsupported local test target protocol: ${url.protocol}`);
+      }
+      const expectedStatus = new Set(
+        (statusText || "200,204")
+          .split(/[|/;]/)
+          .flatMap((part) => part.split("+"))
+          .map((part) => Number.parseInt(part, 10))
+          .filter((value) => Number.isInteger(value) && value >= 100 && value <= 599)
+      );
+      if (!expectedStatus.size) expectedStatus.add(200);
+      return { url, expectedStatus };
+    });
+}
+
 async function readText(path, fallback = "") {
   try {
     return await readFile(path, "utf8");
@@ -57,15 +107,51 @@ async function readPrevious() {
 }
 
 async function fetchSource(url) {
-  const response = await fetch(url, {
-    headers: { "user-agent": "github-socks5-checker/1.0" },
-    signal: AbortSignal.timeout(30_000),
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  try {
+    const response = await fetch(url, {
+      headers: { "user-agent": "github-socks5-checker/1.0" },
+      signal: AbortSignal.timeout(30_000),
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return parseSourceText(await response.text(), response.headers.get("content-type") || "");
+  } catch (fetchError) {
+    const { stdout } = await execFile("curl", [
+      "-L",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "30",
+      "--user-agent",
+      "github-socks5-checker/1.0",
+      url,
+    ], { maxBuffer: 5 * 1024 * 1024 });
+    console.warn(`Fetch fallback used for ${url}: ${fetchError.message}`);
+    return parseSourceText(stdout, "");
+  }
+}
 
-  const text = await response.text();
+async function fetchCheckerData(proxy) {
+  const url = `${CHECKER_URL.replace(/\/$/, "")}/check?proxy=${encodeURIComponent(proxy)}`;
+  const timeoutSeconds = Math.max(1, Math.ceil(TIMEOUT_MS / 1000));
+  const { stdout } = await execFile("curl", [
+    "-L",
+    "--silent",
+    "--show-error",
+    "--max-time",
+    String(timeoutSeconds),
+    "--header",
+    "accept: application/json",
+    "--user-agent",
+    "github-socks5-checker/1.0",
+    url,
+  ], { maxBuffer: 2 * 1024 * 1024 });
+  return JSON.parse(stdout);
+}
+
+function parseSourceText(text, contentType) {
   const values = [];
-  if ((response.headers.get("content-type") || "").includes("json") || text.trim().startsWith("[")) {
+  if (contentType.includes("json") || text.trim().startsWith("[")) {
     try {
       const json = JSON.parse(text);
       for (const item of Array.isArray(json) ? json : []) {
@@ -109,6 +195,93 @@ function calculateRisk(exit) {
   return Number((score * 100).toFixed(3));
 }
 
+function parseRiskLabel(value) {
+  const match = String(value || "").match(/\(([^)]+)\)/);
+  return match ? match[1].trim().toLowerCase() : "";
+}
+
+function riskPenalty(label) {
+  return {
+    "very low": 0,
+    low: 0,
+    elevated: 0.2,
+    medium: 0.7,
+    moderate: 0.7,
+    high: 1.8,
+    "very high": 3,
+    extreme: 3,
+  }[label] ?? 0;
+}
+
+function purityLevel(score) {
+  if (score >= 4.8) return "extremely_clean";
+  if (score >= 4.2) return "clean";
+  if (score >= 3.2) return "normal";
+  if (score >= 2.0) return "high_risk";
+  return "extreme_risk";
+}
+
+function classifyPurity(exit) {
+  if (!exit || exit.error) {
+    return {
+      status: "unknown",
+      score: "",
+      percent: "",
+      level: "unknown",
+      reasons: ["lookup_failed"],
+      riskLabel: "",
+    };
+  }
+
+  let score = 5.0;
+  let hardBad = false;
+  const reasons = [];
+  const penalties = {
+    is_bogon: 5.0,
+    is_tor: 3.0,
+    is_proxy: 2.0,
+    is_vpn: 0.8,
+    is_abuser: 2.5,
+  };
+  const hardFlags = new Set(["is_bogon", "is_tor", "is_proxy", "is_abuser"]);
+  for (const [flag, penalty] of Object.entries(penalties)) {
+    if (exit[flag] === true) {
+      reasons.push(flag);
+      score -= penalty;
+      hardBad = hardBad || hardFlags.has(flag);
+    }
+  }
+
+  const labels = [
+    parseRiskLabel(exit.company?.abuser_score),
+    parseRiskLabel(exit.asn?.abuser_score),
+  ].filter(Boolean);
+  const riskLabel = labels.sort((a, b) => riskPenalty(b) - riskPenalty(a))[0] || "";
+  if (riskLabel) {
+    score -= riskPenalty(riskLabel);
+    if (["high", "very high", "extreme"].includes(riskLabel)) {
+      hardBad = true;
+      reasons.push(`risk=${riskLabel}`);
+    }
+  }
+
+  score = Math.max(0, Number(score.toFixed(1)));
+  const level = purityLevel(score);
+  const status = hardBad || ["high_risk", "extreme_risk"].includes(level)
+    ? "dirty"
+    : score < MIN_PURITY_SCORE
+      ? "warning"
+      : "clean";
+  return {
+    status,
+    score,
+    percent: `${Math.round((score / 5) * 100)}%`,
+    level,
+    reasons,
+    riskLabel,
+  };
+}
+
 function riskLevel(percent) {
   if (percent >= 100) return "critical";
   if (percent >= 20) return "high";
@@ -123,16 +296,86 @@ function countryEmoji(code) {
   return String.fromCodePoint(...[...value].map((char) => 127397 + char.charCodeAt(0)));
 }
 
+async function testHttpThroughProxy(proxy, target) {
+  const startedAt = Date.now();
+  const timeoutSeconds = Math.max(1, Math.ceil(LOCAL_TIMEOUT_MS / 1000));
+  try {
+    const { stdout } = await execFile("curl", [
+      "-L",
+      "--silent",
+      "--show-error",
+      "--output",
+      "/dev/null",
+      "--write-out",
+      "%{http_code}",
+      "--max-time",
+      String(timeoutSeconds),
+      "--connect-timeout",
+      String(timeoutSeconds),
+      "--proxy",
+      proxy,
+      "--user-agent",
+      "github-socks5-checker-local/1.0",
+      target.url.toString(),
+    ], { maxBuffer: 256 * 1024 });
+    const status = Number.parseInt(stdout.trim().slice(-3), 10) || 0;
+    const latency = Date.now() - startedAt;
+    return {
+      url: target.url.toString(),
+      ok: target.expectedStatus.has(status) && latency <= LOCAL_MAX_LATENCY_MS,
+      status,
+      latency,
+    };
+  } catch (error) {
+    return {
+      url: target.url.toString(),
+      ok: false,
+      status: 0,
+      latency: Date.now() - startedAt,
+      error: error?.message || String(error),
+    };
+  }
+}
+
+async function localValidateProxy(proxy) {
+  if (!LOCAL_CHECK) return { ok: true, required: 0, successes: 0, tests: [] };
+  const tests = [];
+  for (const target of LOCAL_TEST_TARGETS) {
+    try {
+      tests.push(await testHttpThroughProxy(proxy, target));
+    } catch (error) {
+      tests.push({
+        url: target.url.toString(),
+        ok: false,
+        status: 0,
+        latency: LOCAL_TIMEOUT_MS,
+        error: error?.message || String(error),
+      });
+    }
+  }
+  const successes = tests.filter((test) => test.ok).length;
+  const required = Math.min(LOCAL_REQUIRED_SUCCESSES, LOCAL_TEST_TARGETS.length);
+  return {
+    ok: successes >= required,
+    required,
+    successes,
+    tests,
+    latency: successes ? Math.round(tests.filter((test) => test.ok).reduce((sum, test) => sum + test.latency, 0) / successes) : LOCAL_TIMEOUT_MS,
+  };
+}
+
 async function checkProxy(proxy) {
   const startedAt = Date.now();
   try {
-    const response = await fetch(`${CHECKER_URL.replace(/\/$/, "")}/check?proxy=${encodeURIComponent(proxy)}`, {
-      headers: { accept: "application/json", "user-agent": "github-socks5-checker/1.0" },
-      signal: AbortSignal.timeout(TIMEOUT_MS),
-    });
-    const data = await response.json();
-    if (!response.ok || !data.success || !data.exit?.ip) {
-      return { proxy, success: false, error: data.error || `HTTP ${response.status}` };
+    const data = await fetchCheckerData(proxy);
+    if (!data.success || !data.exit?.ip) {
+      return {
+        proxy,
+        success: false,
+        remotelyUsable: false,
+        locallyUsable: false,
+        error: data.error || "checker rejected proxy",
+      };
     }
 
     const parsed = new URL(data.link || proxy);
@@ -140,7 +383,19 @@ async function checkProxy(proxy) {
     const location = exit.location || {};
     const asn = exit.asn || {};
     const risk = calculateRisk(exit);
+    const purity = classifyPurity(exit);
     const latency = Number(data.responseTime || Date.now() - startedAt);
+    const local = await localValidateProxy(data.link || proxy);
+    if (!local.ok) {
+      return {
+        proxy: data.link || proxy,
+        success: false,
+        remotelyUsable: true,
+        locallyUsable: false,
+        local,
+        error: `local validation failed (${local.successes}/${local.required})`,
+      };
+    }
 
     return {
       proxy: data.link || proxy,
@@ -161,8 +416,16 @@ async function checkProxy(proxy) {
       continent_cn: location.continent || "",
       continent_en: location.continent || "",
       responseTime: latency,
+      localResponseTime: local.latency,
+      local,
       riskScore: risk,
       riskLevel: riskLevel(risk),
+      purity,
+      purityScore: purity.score,
+      purityPercent: purity.percent,
+      purityStatus: purity.status,
+      purityLevel: purity.level,
+      purityReasons: purity.reasons,
       networkType: exit.company?.type || asn.type || "",
       flags: {
         datacenter: Boolean(exit.is_datacenter),
@@ -174,11 +437,38 @@ async function checkProxy(proxy) {
         bogon: Boolean(exit.is_bogon),
       },
       checkedAt: new Date().toISOString(),
+      remotelyUsable: true,
+      locallyUsable: true,
       success: true,
     };
   } catch (error) {
-    return { proxy, success: false, error: error?.name === "TimeoutError" ? "timeout" : String(error?.message || error) };
+    return {
+      proxy,
+      success: false,
+      remotelyUsable: false,
+      locallyUsable: false,
+      error: error?.name === "TimeoutError" ? "timeout" : String(error?.message || error),
+    };
   }
+}
+
+function failureKey(item) {
+  if (item?.remotelyUsable === true && item?.locallyUsable === false) {
+    return "local_validation_failed";
+  }
+  const error = String(item?.error || "unknown");
+  if (error.includes("checker rejected proxy")) return "checker_rejected";
+  if (error.includes("Command failed: curl")) return "checker_request_failed";
+  if (error.toLowerCase().includes("timeout")) return "timeout";
+  return error.slice(0, 80);
+}
+
+function countBy(values, keyFn) {
+  return values.reduce((counts, value) => {
+    const key = keyFn(value);
+    counts[key] = (counts[key] || 0) + 1;
+    return counts;
+  }, {});
 }
 
 async function mapConcurrent(values, worker, concurrency) {
@@ -189,7 +479,8 @@ async function mapConcurrent(values, worker, concurrency) {
       const index = nextIndex++;
       results[index] = await worker(values[index]);
       const result = results[index];
-      console.log(`[${index + 1}/${values.length}] ${result.success ? "OK" : "FAIL"} ${values[index]}`);
+      const suffix = result.success ? "" : ` (${failureKey(result)})`;
+      console.log(`[${index + 1}/${values.length}] ${result.success ? "OK" : "FAIL"} ${values[index]}${suffix}`);
     }
   }));
   return results;
@@ -225,17 +516,32 @@ if (!candidates.length) throw new Error("No valid SOCKS5 candidates were found")
 const checked = await mapConcurrent(candidates, checkProxy, CONCURRENCY);
 const successful = checked
   .filter((item) => item.success && item.responseTime <= MAX_LATENCY_MS)
-  .sort((a, b) => a.riskScore - b.riskScore || a.responseTime - b.responseTime);
+  .sort((a, b) => {
+    const purityA = Number.isFinite(a.purityScore) ? a.purityScore : -1;
+    const purityB = Number.isFinite(b.purityScore) ? b.purityScore : -1;
+    return purityB - purityA || a.riskScore - b.riskScore || a.localResponseTime - b.localResponseTime || a.responseTime - b.responseTime;
+  });
 
 const preferred = successful.filter((item) =>
-  !item.flags.bogon && !item.flags.tor && !item.flags.vpn && !item.flags.datacenter
+  item.locallyUsable &&
+  item.purityStatus === "clean" &&
+  !item.flags.bogon &&
+  !item.flags.tor &&
+  !item.flags.vpn &&
+  !item.flags.proxy
 );
 const preferredSet = new Set(preferred.map((item) => item.proxy));
-const fallback = successful.filter((item) => !preferredSet.has(item.proxy));
+const fallbackSource = PUBLISH_ONLY_CLEAN
+  ? successful.filter((item) => item.purityStatus === "clean")
+  : successful;
+const fallback = fallbackSource.filter((item) => !preferredSet.has(item.proxy));
 const freshSelection = [...preferred, ...fallback].slice(0, MAX_RESULTS);
-const selected = freshSelection.length
+const selected = freshSelection.length || !RETAIN_PREVIOUS_ON_EMPTY
   ? freshSelection
   : previous.slice(0, MAX_RESULTS).map((item) => ({ ...item, retainedFromPreviousRun: true }));
+
+const failed = checked.filter((item) => !item.success);
+const puritySummary = countBy(successful, (item) => item.purityStatus || "unknown");
 
 await mkdir("data", { recursive: true });
 await writeFile("data/socks5.json", `${JSON.stringify(selected, null, 2)}\n`);
@@ -249,9 +555,19 @@ await writeFile("data/status.json", `${JSON.stringify({
   uniqueCandidates: normalized.length,
   checked: candidates.length,
   successful: successful.length,
+  remoteFailures: failed.filter((item) => item.remotelyUsable === false).length,
+  localFailures: failed.filter((item) => item.remotelyUsable === true && item.locallyUsable === false).length,
+  failureReasons: countBy(failed, failureKey),
   preferred: preferred.length,
+  locallyValidated: LOCAL_CHECK,
+  localTargets: LOCAL_TEST_TARGETS.map((target) => target.url.toString()),
+  localRequiredSuccesses: Math.min(LOCAL_REQUIRED_SUCCESSES, LOCAL_TEST_TARGETS.length),
+  minPurityScore: MIN_PURITY_SCORE,
+  publishOnlyClean: PUBLISH_ONLY_CLEAN,
+  purity: puritySummary,
+  clean: successful.filter((item) => item.purityStatus === "clean").length,
   published: selected.length,
   retainedPrevious: freshSelection.length === 0 && selected.length > 0,
 }, null, 2)}\n`);
 
-console.log(`Published ${selected.length} nodes (${successful.length} usable, ${preferred.length} preferred)`);
+console.log(`Published ${selected.length} nodes (${successful.length} locally usable, ${preferred.length} clean preferred)`);
