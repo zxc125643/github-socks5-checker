@@ -1,24 +1,24 @@
 [
   {
-    "proxy": "socks5://206.123.156.209:4090",
+    "proxy": "socks5://82.202.139.46:1080",
     "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 4090,
-    "clientIp": "158.51.50.11",
-    "country": "CA",
-    "city": "Calgary",
-    "asn": "20119",
-    "asOrganization": "Arrow Group Inc.",
-    "latitude": 51.05011,
-    "longitude": -114.08529,
-    "country_cn": "Canada",
-    "country_en": "Canada",
-    "country_emoji": "🇨🇦",
-    "continent": "NA",
-    "continent_cn": "NA",
-    "continent_en": "NA",
-    "responseTime": 3747,
-    "localResponseTime": 5907,
+    "ip": "82.202.139.46",
+    "port": 1080,
+    "clientIp": "82.202.139.46",
+    "country": "RU",
+    "city": "Moscow",
+    "asn": "208677",
+    "asOrganization": "Cloud Technologies LLC trading as Cloud.ru",
+    "latitude": 55.7386,
+    "longitude": 37.6068,
+    "country_cn": "Russia",
+    "country_en": "Russia",
+    "country_emoji": "🇷🇺",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 2053,
+    "localResponseTime": 2868,
     "local": {
       "ok": true,
       "required": 2,
@@ -28,315 +28,39 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 7722
+          "latency": 4002
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 4091
+          "latency": 1733
         }
       ],
-      "latency": 5907
+      "latency": 2868
     },
-    "riskScore": 0.35,
-    "riskLevel": "low",
-    "purity": {
-      "status": "clean",
-      "score": 5,
-      "percent": "100%",
-      "level": "extremely_clean",
-      "reasons": [],
-      "riskLabel": "very low"
-    },
-    "purityScore": 5,
-    "purityPercent": "100%",
-    "purityStatus": "clean",
-    "purityLevel": "extremely_clean",
-    "purityReasons": [],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": false,
-      "abuser": false,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:32:12.595Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.229:5212",
-    "protocol": "socks5",
-    "ip": "206.123.156.229",
-    "port": 5212,
-    "clientIp": "179.127.11.105",
-    "country": "BR",
-    "city": "Santa Rita do Novo Destino",
-    "asn": "28209",
-    "asOrganization": "Under Servicos de Internet Ltda",
-    "latitude": -15.13528,
-    "longitude": -49.12028,
-    "country_cn": "Brazil",
-    "country_en": "Brazil",
-    "country_emoji": "🇧🇷",
-    "continent": "SA",
-    "continent_cn": "SA",
-    "continent_en": "SA",
-    "responseTime": 8485,
-    "localResponseTime": 6374,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 6865
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 5882
-        }
-      ],
-      "latency": 6374
-    },
-    "riskScore": 1.125,
-    "riskLevel": "low",
-    "purity": {
-      "status": "clean",
-      "score": 5,
-      "percent": "100%",
-      "level": "extremely_clean",
-      "reasons": [],
-      "riskLabel": "low"
-    },
-    "purityScore": 5,
-    "purityPercent": "100%",
-    "purityStatus": "clean",
-    "purityLevel": "extremely_clean",
-    "purityReasons": [],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": false,
-      "abuser": false,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:27:16.239Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.247:15958",
-    "protocol": "socks5",
-    "ip": "206.123.156.247",
-    "port": 15958,
-    "clientIp": "72.61.229.41",
-    "country": "IN",
-    "city": "Mumbai",
-    "asn": "47583",
-    "asOrganization": "Hostinger International Limited",
-    "latitude": 19.07283,
-    "longitude": 72.88261,
-    "country_cn": "India",
-    "country_en": "India",
-    "country_emoji": "🇮🇳",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 5456,
-    "localResponseTime": 6570,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 7267
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 5872
-        }
-      ],
-      "latency": 6570
-    },
-    "riskScore": 1.8,
-    "riskLevel": "low",
-    "purity": {
-      "status": "clean",
-      "score": 5,
-      "percent": "100%",
-      "level": "extremely_clean",
-      "reasons": [],
-      "riskLabel": "low"
-    },
-    "purityScore": 5,
-    "purityPercent": "100%",
-    "purityStatus": "clean",
-    "purityLevel": "extremely_clean",
-    "purityReasons": [],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": false,
-      "abuser": false,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:26:47.397Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://104.152.50.252:8000",
-    "protocol": "socks5",
-    "ip": "104.152.50.252",
-    "port": 8000,
-    "clientIp": "104.152.50.252",
-    "country": "US",
-    "city": "Los Angeles",
-    "asn": "18450",
-    "asOrganization": "WebNX, Inc.",
-    "latitude": 34.0549,
-    "longitude": -118.243,
-    "country_cn": "United States",
-    "country_en": "United States",
-    "country_emoji": "🇺🇸",
-    "continent": "NA",
-    "continent_cn": "NA",
-    "continent_en": "NA",
-    "responseTime": 1042,
-    "localResponseTime": 2641,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 3620
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 1662
-        }
-      ],
-      "latency": 2641
-    },
-    "riskScore": 2.85,
-    "riskLevel": "low",
-    "purity": {
-      "status": "clean",
-      "score": 4.8,
-      "percent": "96%",
-      "level": "extremely_clean",
-      "reasons": [],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 4.8,
-    "purityPercent": "96%",
-    "purityStatus": "clean",
-    "purityLevel": "extremely_clean",
-    "purityReasons": [],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": false,
-      "abuser": false,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:25:13.779Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.199:4879",
-    "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 4879,
-    "clientIp": "103.187.23.21",
-    "country": "BD",
-    "city": "Dhaka",
-    "asn": "139016",
-    "asOrganization": "ExonHost",
-    "latitude": 23.71039,
-    "longitude": 90.40711,
-    "country_cn": "Bangladesh",
-    "country_en": "Bangladesh",
-    "country_emoji": "🇧🇩",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 3091,
-    "localResponseTime": 2930,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 2999
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 2860
-        }
-      ],
-      "latency": 2930
-    },
-    "riskScore": 6.5,
+    "riskScore": 10.475,
     "riskLevel": "elevated",
     "purity": {
-      "status": "clean",
-      "score": 4.8,
-      "percent": "96%",
-      "level": "extremely_clean",
-      "reasons": [],
-      "riskLabel": "elevated"
+      "status": "dirty",
+      "score": 3.2,
+      "percent": "64%",
+      "level": "normal",
+      "reasons": [
+        "risk=high"
+      ],
+      "riskLabel": "high"
     },
-    "purityScore": 4.8,
-    "purityPercent": "96%",
-    "purityStatus": "clean",
-    "purityLevel": "extremely_clean",
-    "purityReasons": [],
-    "networkType": "business",
+    "purityScore": 3.2,
+    "purityPercent": "64%",
+    "purityStatus": "dirty",
+    "purityLevel": "normal",
+    "purityReasons": [
+      "risk=high"
+    ],
+    "networkType": "hosting",
     "flags": {
-      "datacenter": false,
+      "datacenter": true,
       "tor": false,
       "vpn": false,
       "proxy": false,
@@ -344,16 +68,164 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:29:17.778Z",
+    "checkedAt": "2026-07-02T22:31:11.305Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.233:5154",
+    "proxy": "socks5://72.56.24.101:1080",
     "protocol": "socks5",
-    "ip": "206.123.156.233",
-    "port": 5154,
+    "ip": "72.56.24.101",
+    "port": 1080,
+    "clientIp": "5.129.236.27",
+    "country": "NL",
+    "city": "Amsterdam",
+    "asn": "210976",
+    "asOrganization": "Timeweb, LLP",
+    "latitude": 52.37403,
+    "longitude": 4.88969,
+    "country_cn": "The Netherlands",
+    "country_en": "The Netherlands",
+    "country_emoji": "🇳🇱",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 68,
+    "localResponseTime": 1723,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 2159
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 1287
+        }
+      ],
+      "latency": 1723
+    },
+    "riskScore": 13.725,
+    "riskLevel": "elevated",
+    "purity": {
+      "status": "dirty",
+      "score": 3.2,
+      "percent": "64%",
+      "level": "normal",
+      "reasons": [
+        "risk=high"
+      ],
+      "riskLabel": "high"
+    },
+    "purityScore": 3.2,
+    "purityPercent": "64%",
+    "purityStatus": "dirty",
+    "purityLevel": "normal",
+    "purityReasons": [
+      "risk=high"
+    ],
+    "networkType": "hosting",
+    "flags": {
+      "datacenter": true,
+      "tor": false,
+      "vpn": false,
+      "proxy": false,
+      "abuser": false,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:33:45.693Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://5.129.236.27:1080",
+    "protocol": "socks5",
+    "ip": "5.129.236.27",
+    "port": 1080,
+    "clientIp": "5.129.236.27",
+    "country": "NL",
+    "city": "Amsterdam",
+    "asn": "210976",
+    "asOrganization": "Timeweb, LLP",
+    "latitude": 52.37403,
+    "longitude": 4.88969,
+    "country_cn": "The Netherlands",
+    "country_en": "The Netherlands",
+    "country_emoji": "🇳🇱",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 67,
+    "localResponseTime": 1802,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 2222
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 1381
+        }
+      ],
+      "latency": 1802
+    },
+    "riskScore": 13.725,
+    "riskLevel": "elevated",
+    "purity": {
+      "status": "dirty",
+      "score": 3.2,
+      "percent": "64%",
+      "level": "normal",
+      "reasons": [
+        "risk=high"
+      ],
+      "riskLabel": "high"
+    },
+    "purityScore": 3.2,
+    "purityPercent": "64%",
+    "purityStatus": "dirty",
+    "purityLevel": "normal",
+    "purityReasons": [
+      "risk=high"
+    ],
+    "networkType": "hosting",
+    "flags": {
+      "datacenter": true,
+      "tor": false,
+      "vpn": false,
+      "proxy": false,
+      "abuser": false,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:33:55.448Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.230:9030",
+    "protocol": "socks5",
+    "ip": "206.123.156.230",
+    "port": 9030,
     "clientIp": "194.163.131.55",
     "country": "FR",
     "city": "Lauterbourg",
@@ -367,8 +239,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 4578,
-    "localResponseTime": 6054,
+    "responseTime": 262,
+    "localResponseTime": 2450,
     "local": {
       "ok": true,
       "required": 2,
@@ -378,16 +250,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 6158
+          "latency": 2013
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 5949
+          "latency": 2887
         }
       ],
-      "latency": 6054
+      "latency": 2450
     },
     "riskScore": 20.475,
     "riskLevel": "high",
@@ -418,105 +290,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:26:55.090Z",
+    "checkedAt": "2026-07-02T22:28:46.001Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:4047",
+    "proxy": "socks5://206.123.156.230:9743",
     "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 4047,
-    "clientIp": "20.237.251.56",
-    "country": "US",
-    "city": "San Jose",
-    "asn": "8075",
-    "asOrganization": "Microsoft Corporation",
-    "latitude": 37.3387,
-    "longitude": -121.885,
-    "country_cn": "United States",
-    "country_en": "United States",
-    "country_emoji": "🇺🇸",
-    "continent": "NA",
-    "continent_cn": "NA",
-    "continent_en": "NA",
-    "responseTime": 1058,
-    "localResponseTime": 2691,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 2099
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3282
-        }
-      ],
-      "latency": 2691
-    },
-    "riskScore": 15.65,
-    "riskLevel": "elevated",
-    "purity": {
-      "status": "dirty",
-      "score": 2.5,
-      "percent": "50%",
-      "level": "high_risk",
-      "reasons": [
-        "is_abuser"
-      ],
-      "riskLabel": "low"
-    },
-    "purityScore": 2.5,
-    "purityPercent": "50%",
-    "purityStatus": "dirty",
-    "purityLevel": "high_risk",
-    "purityReasons": [
-      "is_abuser"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": false,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:28:42.550Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://89.188.76.72:1080",
-    "protocol": "socks5",
-    "ip": "89.188.76.72",
-    "port": 1080,
-    "clientIp": "89.188.76.72",
-    "country": "DK",
-    "city": "Hørsholm",
-    "asn": "48854",
-    "asOrganization": "team.blue Denmark A/S",
-    "latitude": 55.8835,
-    "longitude": 12.5049,
-    "country_cn": "Denmark",
-    "country_en": "Denmark",
-    "country_emoji": "🇩🇰",
+    "ip": "206.123.156.230",
+    "port": 9743,
+    "clientIp": "194.163.131.55",
+    "country": "FR",
+    "city": "Lauterbourg",
+    "asn": "51167",
+    "asOrganization": "Contabo GmbH",
+    "latitude": 48.97515,
+    "longitude": 8.17846,
+    "country_cn": "France",
+    "country_en": "France",
+    "country_emoji": "🇫🇷",
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 220,
-    "localResponseTime": 2619,
+    "responseTime": 1038,
+    "localResponseTime": 2536,
     "local": {
       "ok": true,
       "required": 2,
@@ -526,35 +324,35 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 4075
+          "latency": 3466
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1163
+          "latency": 1605
         }
       ],
-      "latency": 2619
+      "latency": 2536
     },
-    "riskScore": 16.725,
-    "riskLevel": "elevated",
+    "riskScore": 20.475,
+    "riskLevel": "high",
     "purity": {
       "status": "dirty",
-      "score": 2.5,
-      "percent": "50%",
-      "level": "high_risk",
+      "score": 3.2,
+      "percent": "64%",
+      "level": "normal",
       "reasons": [
-        "is_abuser"
+        "risk=high"
       ],
-      "riskLabel": "low"
+      "riskLabel": "high"
     },
-    "purityScore": 2.5,
-    "purityPercent": "50%",
+    "purityScore": 3.2,
+    "purityPercent": "64%",
     "purityStatus": "dirty",
-    "purityLevel": "high_risk",
+    "purityLevel": "normal",
     "purityReasons": [
-      "is_abuser"
+      "risk=high"
     ],
     "networkType": "hosting",
     "flags": {
@@ -562,20 +360,20 @@
       "tor": false,
       "vpn": false,
       "proxy": false,
-      "abuser": true,
+      "abuser": false,
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:12.641Z",
+    "checkedAt": "2026-07-02T22:29:42.213Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:7078",
+    "proxy": "socks5://206.123.156.212:7009",
     "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 7078,
+    "ip": "206.123.156.212",
+    "port": 7009,
     "clientIp": "23.254.151.98",
     "country": "US",
     "city": "Seattle",
@@ -589,8 +387,8 @@
     "continent": "NA",
     "continent_cn": "NA",
     "continent_en": "NA",
-    "responseTime": 1411,
-    "localResponseTime": 3932,
+    "responseTime": 4817,
+    "localResponseTime": 6162,
     "local": {
       "ok": true,
       "required": 2,
@@ -600,16 +398,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2867
+          "latency": 6952
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 4997
+          "latency": 5372
         }
       ],
-      "latency": 3932
+      "latency": 6162
     },
     "riskScore": 18.075,
     "riskLevel": "elevated",
@@ -640,31 +438,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:26:09.537Z",
+    "checkedAt": "2026-07-02T22:31:17.674Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:4814",
+    "proxy": "socks5://206.123.156.212:5208",
     "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 4814,
-    "clientIp": "192.241.126.166",
+    "ip": "206.123.156.212",
+    "port": 5208,
+    "clientIp": "23.254.151.98",
     "country": "US",
-    "city": "Los Angeles",
-    "asn": "55286",
-    "asOrganization": "B2 Net Solutions Inc.",
-    "latitude": 34.0609,
-    "longitude": -118.2414,
+    "city": "Seattle",
+    "asn": "54290",
+    "asOrganization": "HostPapa",
+    "latitude": 47.60621,
+    "longitude": -122.33207,
     "country_cn": "United States",
     "country_en": "United States",
     "country_emoji": "🇺🇸",
     "continent": "NA",
     "continent_cn": "NA",
     "continent_en": "NA",
-    "responseTime": 1818,
-    "localResponseTime": 2426,
+    "responseTime": 4878,
+    "localResponseTime": 6623,
     "local": {
       "ok": true,
       "required": 2,
@@ -674,19 +472,19 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2027
+          "latency": 5988
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2824
+          "latency": 7257
         }
       ],
-      "latency": 2426
+      "latency": 6623
     },
-    "riskScore": 23.125,
-    "riskLevel": "high",
+    "riskScore": 18.075,
+    "riskLevel": "elevated",
     "purity": {
       "status": "dirty",
       "score": 2.3,
@@ -714,81 +512,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:27:12.947Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.247:30972",
-    "protocol": "socks5",
-    "ip": "206.123.156.247",
-    "port": 30972,
-    "clientIp": "192.241.126.166",
-    "country": "US",
-    "city": "Los Angeles",
-    "asn": "55286",
-    "asOrganization": "B2 Net Solutions Inc.",
-    "latitude": 34.0609,
-    "longitude": -118.2414,
-    "country_cn": "United States",
-    "country_en": "United States",
-    "country_emoji": "🇺🇸",
-    "continent": "NA",
-    "continent_cn": "NA",
-    "continent_en": "NA",
-    "responseTime": 1802,
-    "localResponseTime": 5564,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 6478
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 4650
-        }
-      ],
-      "latency": 5564
-    },
-    "riskScore": 23.125,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 2.3,
-      "percent": "46%",
-      "level": "high_risk",
-      "reasons": [
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 2.3,
-    "purityPercent": "46%",
-    "purityStatus": "dirty",
-    "purityLevel": "high_risk",
-    "purityReasons": [
-      "is_abuser"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": false,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:29:14.930Z",
+    "checkedAt": "2026-07-02T22:32:44.273Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -811,8 +535,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 3668,
-    "localResponseTime": 2913,
+    "responseTime": 602,
+    "localResponseTime": 2354,
     "local": {
       "ok": true,
       "required": 2,
@@ -822,16 +546,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2442
+          "latency": 3266
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 3384
+          "latency": 1442
         }
       ],
-      "latency": 2913
+      "latency": 2354
     },
     "riskScore": 35.375,
     "riskLevel": "high",
@@ -864,16 +588,92 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:27:09.905Z",
+    "checkedAt": "2026-07-02T22:27:10.980Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:10868",
+    "proxy": "socks5://206.123.156.233:13225",
+    "protocol": "socks5",
+    "ip": "206.123.156.233",
+    "port": 13225,
+    "clientIp": "194.163.131.55",
+    "country": "FR",
+    "city": "Lauterbourg",
+    "asn": "51167",
+    "asOrganization": "Contabo GmbH",
+    "latitude": 48.97515,
+    "longitude": 8.17846,
+    "country_cn": "France",
+    "country_en": "France",
+    "country_emoji": "🇫🇷",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 1368,
+    "localResponseTime": 2478,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 2167
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 2789
+        }
+      ],
+      "latency": 2478
+    },
+    "riskScore": 35.375,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0.7,
+      "percent": "14%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_abuser",
+        "risk=high"
+      ],
+      "riskLabel": "high"
+    },
+    "purityScore": 0.7,
+    "purityPercent": "14%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_abuser",
+      "risk=high"
+    ],
+    "networkType": "hosting",
+    "flags": {
+      "datacenter": true,
+      "tor": false,
+      "vpn": false,
+      "proxy": false,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:29:22.433Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.199:5309",
     "protocol": "socks5",
     "ip": "206.123.156.199",
-    "port": 10868,
+    "port": 5309,
     "clientIp": "194.163.131.55",
     "country": "FR",
     "city": "Lauterbourg",
@@ -887,8 +687,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 1527,
-    "localResponseTime": 3233,
+    "responseTime": 397,
+    "localResponseTime": 2557,
     "local": {
       "ok": true,
       "required": 2,
@@ -898,16 +698,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 4680
+          "latency": 2043
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1785
+          "latency": 3070
         }
       ],
-      "latency": 3233
+      "latency": 2557
     },
     "riskScore": 35.375,
     "riskLevel": "high",
@@ -940,31 +740,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:26:58.737Z",
+    "checkedAt": "2026-07-02T22:27:48.859Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.230:5594",
+    "proxy": "socks5://206.123.156.212:5443",
     "protocol": "socks5",
-    "ip": "206.123.156.230",
-    "port": 5594,
-    "clientIp": "194.163.131.55",
-    "country": "FR",
-    "city": "Lauterbourg",
-    "asn": "51167",
-    "asOrganization": "Contabo GmbH",
-    "latitude": 48.97515,
-    "longitude": 8.17846,
-    "country_cn": "France",
-    "country_en": "France",
-    "country_emoji": "🇫🇷",
+    "ip": "206.123.156.212",
+    "port": 5443,
+    "clientIp": "139.59.184.99",
+    "country": "GB",
+    "city": "London",
+    "asn": "14061",
+    "asOrganization": "DigitalOcean, LLC",
+    "latitude": 51.50853,
+    "longitude": -0.12574,
+    "country_cn": "United Kingdom",
+    "country_en": "United Kingdom",
+    "country_emoji": "🇬🇧",
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 7505,
-    "localResponseTime": 7281,
+    "responseTime": 263,
+    "localResponseTime": 1961,
     "local": {
       "ok": true,
       "required": 2,
@@ -974,18 +774,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 7291
+          "latency": 1868
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 7271
+          "latency": 2053
         }
       ],
-      "latency": 7281
+      "latency": 1961
     },
-    "riskScore": 35.375,
+    "riskScore": 61.45,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -1016,83 +816,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:29:37.908Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://218.52.249.121:1080",
-    "protocol": "socks5",
-    "ip": "218.52.249.121",
-    "port": 1080,
-    "clientIp": "218.52.249.121",
-    "country": "KR",
-    "city": "Seoul",
-    "asn": "9318",
-    "asOrganization": "SK Broadband Co Ltd",
-    "latitude": 37.5561,
-    "longitude": 126.975,
-    "country_cn": "South Korea",
-    "country_en": "South Korea",
-    "country_emoji": "🇰🇷",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 1761,
-    "localResponseTime": 481,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 559
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 402
-        }
-      ],
-      "latency": 481
-    },
-    "riskScore": 30.075,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.5,
-      "percent": "10%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "very low"
-    },
-    "purityScore": 0.5,
-    "purityPercent": "10%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "isp",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:25:09.767Z",
+    "checkedAt": "2026-07-02T22:27:26.919Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -1115,8 +839,8 @@
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 3767,
-    "localResponseTime": 5068,
+    "responseTime": 1951,
+    "localResponseTime": 2301,
     "local": {
       "ok": true,
       "required": 2,
@@ -1126,16 +850,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 4256
+          "latency": 2884
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 5880
+          "latency": 1717
         }
       ],
-      "latency": 5068
+      "latency": 2301
     },
     "riskScore": 30.55,
     "riskLevel": "high",
@@ -1168,31 +892,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:21.984Z",
+    "checkedAt": "2026-07-02T22:27:12.248Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://212.3.127.242:10801",
+    "proxy": "socks5://212.58.132.5:1080",
     "protocol": "socks5",
-    "ip": "212.3.127.242",
-    "port": 10801,
-    "clientIp": "212.3.127.242",
-    "country": "UA",
-    "city": "Slobozhanske",
-    "asn": "6702",
-    "asOrganization": "Science Production Company Trifle Ltd.",
-    "latitude": 48.532,
-    "longitude": 35.0715,
-    "country_cn": "Ukraine",
-    "country_en": "Ukraine",
-    "country_emoji": "🇺🇦",
+    "ip": "212.58.132.5",
+    "port": 1080,
+    "clientIp": "212.58.132.5",
+    "country": "GB",
+    "city": "London",
+    "asn": "8757",
+    "asOrganization": "NSFOCUS, Inc.",
+    "latitude": 51.50853,
+    "longitude": -0.12574,
+    "country_cn": "United Kingdom",
+    "country_en": "United Kingdom",
+    "country_emoji": "🇬🇧",
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 2669,
-    "localResponseTime": 5355,
+    "responseTime": 1961,
+    "localResponseTime": 2056,
     "local": {
       "ok": true,
       "required": 2,
@@ -1202,18 +926,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 6104
+          "latency": 2766
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 4605
+          "latency": 1346
         }
       ],
-      "latency": 5355
+      "latency": 2056
     },
-    "riskScore": 31.225,
+    "riskScore": 30.675,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -1234,9 +958,9 @@
       "is_proxy",
       "is_abuser"
     ],
-    "networkType": "isp",
+    "networkType": "hosting",
     "flags": {
-      "datacenter": false,
+      "datacenter": true,
       "tor": false,
       "vpn": false,
       "proxy": true,
@@ -1244,31 +968,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:20.689Z",
+    "checkedAt": "2026-07-02T22:33:30.062Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://118.70.67.11:1080",
+    "proxy": "socks5://125.227.45.188:5001",
     "protocol": "socks5",
-    "ip": "118.70.67.11",
-    "port": 1080,
-    "clientIp": "118.70.67.11",
-    "country": "VN",
-    "city": "Hoàn Kiếm",
-    "asn": "18403",
-    "asOrganization": "FPT Telecom Company",
-    "latitude": 21.0286,
-    "longitude": 105.851,
-    "country_cn": "Vietnam",
-    "country_en": "Vietnam",
-    "country_emoji": "🇻🇳",
+    "ip": "125.227.45.188",
+    "port": 5001,
+    "clientIp": "125.227.45.188",
+    "country": "TW",
+    "city": "Taipei",
+    "asn": "3462",
+    "asOrganization": "Chunghwa Telecom Co., Ltd.",
+    "latitude": 25.0365,
+    "longitude": 121.55,
+    "country_cn": "Taiwan",
+    "country_en": "Taiwan",
+    "country_emoji": "🇹🇼",
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 3460,
-    "localResponseTime": 3940,
+    "responseTime": 2946,
+    "localResponseTime": 818,
     "local": {
       "ok": true,
       "required": 2,
@@ -1278,18 +1002,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 5956
+          "latency": 1407
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1924
+          "latency": 228
         }
       ],
-      "latency": 3940
+      "latency": 818
     },
-    "riskScore": 31.6,
+    "riskScore": 31.45,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -1320,31 +1044,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:19.458Z",
+    "checkedAt": "2026-07-02T22:29:45.032Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:7327",
+    "proxy": "socks5://89.188.76.72:1080",
     "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 7327,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
+    "ip": "89.188.76.72",
+    "port": 1080,
+    "clientIp": "89.188.76.72",
+    "country": "DK",
+    "city": "Hørsholm",
+    "asn": "48854",
+    "asOrganization": "team.blue Denmark A/S",
+    "latitude": 55.8835,
+    "longitude": 12.5049,
+    "country_cn": "Denmark",
+    "country_en": "Denmark",
+    "country_emoji": "🇩🇰",
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 471,
-    "localResponseTime": 1808,
+    "responseTime": 220,
+    "localResponseTime": 1515,
     "local": {
       "ok": true,
       "required": 2,
@@ -1354,41 +1078,41 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2188
+          "latency": 1795
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1428
+          "latency": 1235
         }
       ],
-      "latency": 1808
+      "latency": 1515
     },
-    "riskScore": 33,
+    "riskScore": 31.45,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
+      "score": 0.5,
+      "percent": "10%",
       "level": "extreme_risk",
       "reasons": [
         "is_proxy",
         "is_abuser"
       ],
-      "riskLabel": "elevated"
+      "riskLabel": "low"
     },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
+    "purityScore": 0.5,
+    "purityPercent": "10%",
     "purityStatus": "dirty",
     "purityLevel": "extreme_risk",
     "purityReasons": [
       "is_proxy",
       "is_abuser"
     ],
-    "networkType": "business",
+    "networkType": "hosting",
     "flags": {
-      "datacenter": false,
+      "datacenter": true,
       "tor": false,
       "vpn": false,
       "proxy": true,
@@ -1396,31 +1120,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:31:52.059Z",
+    "checkedAt": "2026-07-02T22:27:08.928Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.209:4012",
+    "proxy": "socks5://125.227.45.189:5001",
     "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 4012,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 401,
-    "localResponseTime": 2328,
+    "ip": "125.227.45.189",
+    "port": 5001,
+    "clientIp": "125.227.45.189",
+    "country": "TW",
+    "city": "Taipei",
+    "asn": "3462",
+    "asOrganization": "Chunghwa Telecom Co., Ltd.",
+    "latitude": 25.0365,
+    "longitude": 121.55,
+    "country_cn": "Taiwan",
+    "country_en": "Taiwan",
+    "country_emoji": "🇹🇼",
+    "continent": "AS",
+    "continent_cn": "AS",
+    "continent_en": "AS",
+    "responseTime": 1890,
+    "localResponseTime": 2829,
     "local": {
       "ok": true,
       "required": 2,
@@ -1430,39 +1154,39 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 1970
+          "latency": 3438
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2685
+          "latency": 2219
         }
       ],
-      "latency": 2328
+      "latency": 2829
     },
-    "riskScore": 33,
+    "riskScore": 31.45,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
+      "score": 0.5,
+      "percent": "10%",
       "level": "extreme_risk",
       "reasons": [
         "is_proxy",
         "is_abuser"
       ],
-      "riskLabel": "elevated"
+      "riskLabel": "low"
     },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
+    "purityScore": 0.5,
+    "purityPercent": "10%",
     "purityStatus": "dirty",
     "purityLevel": "extreme_risk",
     "purityReasons": [
       "is_proxy",
       "is_abuser"
     ],
-    "networkType": "business",
+    "networkType": "isp",
     "flags": {
       "datacenter": false,
       "tor": false,
@@ -1472,31 +1196,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:33:36.906Z",
+    "checkedAt": "2026-07-02T22:34:04.538Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.209:4068",
+    "proxy": "socks5://8.215.25.3:2080",
     "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 4068,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 1858,
-    "localResponseTime": 2459,
+    "ip": "8.215.25.3",
+    "port": 2080,
+    "clientIp": "8.215.25.3",
+    "country": "ID",
+    "city": "Jakarta",
+    "asn": "45102",
+    "asOrganization": "Alibaba (US) Technology Co., Ltd.",
+    "latitude": -6.20868,
+    "longitude": 106.84549,
+    "country_cn": "Indonesia",
+    "country_en": "Indonesia",
+    "country_emoji": "🇮🇩",
+    "continent": "AS",
+    "continent_cn": "AS",
+    "continent_en": "AS",
+    "responseTime": 1776,
+    "localResponseTime": 1517,
     "local": {
       "ok": true,
       "required": 2,
@@ -1506,41 +1230,41 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2625
+          "latency": 2003
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2293
+          "latency": 1030
         }
       ],
-      "latency": 2459
+      "latency": 1517
     },
-    "riskScore": 33,
+    "riskScore": 33.075,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
+      "score": 0.5,
+      "percent": "10%",
       "level": "extreme_risk",
       "reasons": [
         "is_proxy",
         "is_abuser"
       ],
-      "riskLabel": "elevated"
+      "riskLabel": "low"
     },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
+    "purityScore": 0.5,
+    "purityPercent": "10%",
     "purityStatus": "dirty",
     "purityLevel": "extreme_risk",
     "purityReasons": [
       "is_proxy",
       "is_abuser"
     ],
-    "networkType": "business",
+    "networkType": "hosting",
     "flags": {
-      "datacenter": false,
+      "datacenter": true,
       "tor": false,
       "vpn": false,
       "proxy": true,
@@ -1548,31 +1272,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:33:10.701Z",
+    "checkedAt": "2026-07-02T22:32:13.147Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:5480",
+    "proxy": "socks5://8.218.116.220:1011",
     "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 5480,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 2205,
-    "localResponseTime": 2479,
+    "ip": "8.218.116.220",
+    "port": 1011,
+    "clientIp": "8.218.116.220",
+    "country": "HK",
+    "city": "Hong Kong",
+    "asn": "45102",
+    "asOrganization": "Alibaba (US) Technology Co., Ltd.",
+    "latitude": 22.28552,
+    "longitude": 114.15769,
+    "country_cn": "Hong Kong",
+    "country_en": "Hong Kong",
+    "country_emoji": "🇭🇰",
+    "continent": "AS",
+    "continent_cn": "AS",
+    "continent_en": "AS",
+    "responseTime": 1541,
+    "localResponseTime": 1578,
     "local": {
       "ok": true,
       "required": 2,
@@ -1582,41 +1306,41 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2554
+          "latency": 1657
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2404
+          "latency": 1498
         }
       ],
-      "latency": 2479
+      "latency": 1578
     },
-    "riskScore": 33,
+    "riskScore": 33.075,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
+      "score": 0.5,
+      "percent": "10%",
       "level": "extreme_risk",
       "reasons": [
         "is_proxy",
         "is_abuser"
       ],
-      "riskLabel": "elevated"
+      "riskLabel": "low"
     },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
+    "purityScore": 0.5,
+    "purityPercent": "10%",
     "purityStatus": "dirty",
     "purityLevel": "extreme_risk",
     "purityReasons": [
       "is_proxy",
       "is_abuser"
     ],
-    "networkType": "business",
+    "networkType": "hosting",
     "flags": {
-      "datacenter": false,
+      "datacenter": true,
       "tor": false,
       "vpn": false,
       "proxy": true,
@@ -1624,539 +1348,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:28:04.725Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.233:7009",
-    "protocol": "socks5",
-    "ip": "206.123.156.233",
-    "port": 7009,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 725,
-    "localResponseTime": 3383,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4048
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 2717
-        }
-      ],
-      "latency": 3383
-    },
-    "riskScore": 33,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:29:28.856Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.230:8978",
-    "protocol": "socks5",
-    "ip": "206.123.156.230",
-    "port": 8978,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 1099,
-    "localResponseTime": 3799,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 2769
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 4828
-        }
-      ],
-      "latency": 3799
-    },
-    "riskScore": 33,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:27:56.854Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.229:7902",
-    "protocol": "socks5",
-    "ip": "206.123.156.229",
-    "port": 7902,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 3272,
-    "localResponseTime": 5690,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 7545
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3834
-        }
-      ],
-      "latency": 5690
-    },
-    "riskScore": 33,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:25:48.420Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.233:9442",
-    "protocol": "socks5",
-    "ip": "206.123.156.233",
-    "port": 9442,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 3827,
-    "localResponseTime": 2263,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 2293
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 2232
-        }
-      ],
-      "latency": 2263
-    },
-    "riskScore": 33.25,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:27:05.601Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.199:4540",
-    "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 4540,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 2944,
-    "localResponseTime": 2304,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 3160
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 1447
-        }
-      ],
-      "latency": 2304
-    },
-    "riskScore": 33.25,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:26:17.719Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.212:5651",
-    "protocol": "socks5",
-    "ip": "206.123.156.212",
-    "port": 5651,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 8613,
-    "localResponseTime": 3689,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4165
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3212
-        }
-      ],
-      "latency": 3689
-    },
-    "riskScore": 33.25,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:27:41.001Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.209:5178",
-    "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 5178,
-    "clientIp": "185.56.171.119",
-    "country": "IT",
-    "city": "Otranto",
-    "asn": "3242",
-    "asOrganization": "REEVO S.P.A.",
-    "latitude": 40.14782,
-    "longitude": 18.48593,
-    "country_cn": "Italy",
-    "country_en": "Italy",
-    "country_emoji": "🇮🇹",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 1637,
-    "localResponseTime": 4010,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4914
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3106
-        }
-      ],
-      "latency": 4010
-    },
-    "riskScore": 33.25,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "business",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:25:47.081Z",
+    "checkedAt": "2026-07-02T22:32:12.570Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -2179,8 +1371,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 2765,
-    "localResponseTime": 4228,
+    "responseTime": 1064,
+    "localResponseTime": 2231,
     "local": {
       "ok": true,
       "required": 2,
@@ -2190,16 +1382,168 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 5004
+          "latency": 2798
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 3451
+          "latency": 1663
         }
       ],
-      "latency": 4228
+      "latency": 2231
+    },
+    "riskScore": 33,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0.3,
+      "percent": "6%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser"
+      ],
+      "riskLabel": "elevated"
+    },
+    "purityScore": 0.3,
+    "purityPercent": "6%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser"
+    ],
+    "networkType": "business",
+    "flags": {
+      "datacenter": false,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:27:15.349Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.199:4540",
+    "protocol": "socks5",
+    "ip": "206.123.156.199",
+    "port": 4540,
+    "clientIp": "185.56.171.119",
+    "country": "IT",
+    "city": "Otranto",
+    "asn": "3242",
+    "asOrganization": "REEVO S.P.A.",
+    "latitude": 40.14782,
+    "longitude": 18.48593,
+    "country_cn": "Italy",
+    "country_en": "Italy",
+    "country_emoji": "🇮🇹",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 7055,
+    "localResponseTime": 3337,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 2816
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 3858
+        }
+      ],
+      "latency": 3337
+    },
+    "riskScore": 33,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0.3,
+      "percent": "6%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser"
+      ],
+      "riskLabel": "elevated"
+    },
+    "purityScore": 0.3,
+    "purityPercent": "6%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser"
+    ],
+    "networkType": "business",
+    "flags": {
+      "datacenter": false,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:27:20.198Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.233:5313",
+    "protocol": "socks5",
+    "ip": "206.123.156.233",
+    "port": 5313,
+    "clientIp": "185.56.171.119",
+    "country": "IT",
+    "city": "Otranto",
+    "asn": "3242",
+    "asOrganization": "REEVO S.P.A.",
+    "latitude": 40.14782,
+    "longitude": 18.48593,
+    "country_cn": "Italy",
+    "country_en": "Italy",
+    "country_emoji": "🇮🇹",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 2690,
+    "localResponseTime": 6795,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 6226
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 7364
+        }
+      ],
+      "latency": 6795
     },
     "riskScore": 33.25,
     "riskLevel": "high",
@@ -2232,7 +1576,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:28:42.891Z",
+    "checkedAt": "2026-07-02T22:28:37.279Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -2255,8 +1599,8 @@
     "continent": "NA",
     "continent_cn": "NA",
     "continent_en": "NA",
-    "responseTime": 849,
-    "localResponseTime": 2098,
+    "responseTime": 860,
+    "localResponseTime": 1602,
     "local": {
       "ok": true,
       "required": 2,
@@ -2266,16 +1610,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3008
+          "latency": 1929
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1187
+          "latency": 1274
         }
       ],
-      "latency": 2098
+      "latency": 1602
     },
     "riskScore": 33.45,
     "riskLevel": "high",
@@ -2308,31 +1652,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:12.123Z",
+    "checkedAt": "2026-07-02T22:27:15.796Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://150.230.194.118:555",
+    "proxy": "socks5://202.79.27.12:1080",
     "protocol": "socks5",
-    "ip": "150.230.194.118",
-    "port": 555,
-    "clientIp": "150.230.194.118",
-    "country": "JP",
-    "city": "Inzai",
-    "asn": "31898",
-    "asOrganization": "Oracle Corporation",
-    "latitude": 35.8099,
-    "longitude": 140.12,
-    "country_cn": "Japan",
-    "country_en": "Japan",
-    "country_emoji": "🇯🇵",
+    "ip": "202.79.27.12",
+    "port": 1080,
+    "clientIp": "202.79.27.12",
+    "country": "KH",
+    "city": "Phnom Penh",
+    "asn": "24492",
+    "asOrganization": "WiCAM Corporation Ltd.",
+    "latitude": 11.5346,
+    "longitude": 104.916,
+    "country_cn": "Cambodia",
+    "country_en": "Cambodia",
+    "country_emoji": "🇰🇭",
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 8691,
-    "localResponseTime": 4055,
+    "responseTime": 2354,
+    "localResponseTime": 4482,
     "local": {
       "ok": true,
       "required": 2,
@@ -2342,16 +1686,168 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 6161
+          "latency": 3150
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1948
+          "latency": 5814
         }
       ],
-      "latency": 4055
+      "latency": 4482
+    },
+    "riskScore": 33.45,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0.3,
+      "percent": "6%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser"
+      ],
+      "riskLabel": "elevated"
+    },
+    "purityScore": 0.3,
+    "purityPercent": "6%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser"
+    ],
+    "networkType": "isp",
+    "flags": {
+      "datacenter": false,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:31:27.089Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://185.151.86.121:3699",
+    "protocol": "socks5",
+    "ip": "185.151.86.121",
+    "port": 3699,
+    "clientIp": "31.128.249.254",
+    "country": "UA",
+    "city": "Orzhytsya",
+    "asn": "208139",
+    "asOrganization": "FOP Avator Myhaylo Mykolayovych",
+    "latitude": 49.79182,
+    "longitude": 32.70122,
+    "country_cn": "Ukraine",
+    "country_en": "Ukraine",
+    "country_emoji": "🇺🇦",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 1475,
+    "localResponseTime": 4300,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 5701
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 2899
+        }
+      ],
+      "latency": 4300
+    },
+    "riskScore": 33.95,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0.3,
+      "percent": "6%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser"
+      ],
+      "riskLabel": "elevated"
+    },
+    "purityScore": 0.3,
+    "purityPercent": "6%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser"
+    ],
+    "networkType": "isp",
+    "flags": {
+      "datacenter": false,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:28:44.191Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.212:11433",
+    "protocol": "socks5",
+    "ip": "206.123.156.212",
+    "port": 11433,
+    "clientIp": "213.171.208.62",
+    "country": "GB",
+    "city": "Gloucester",
+    "asn": "8560",
+    "asOrganization": "IONOS SE",
+    "latitude": 51.86568,
+    "longitude": -2.2431,
+    "country_cn": "United Kingdom",
+    "country_en": "United Kingdom",
+    "country_emoji": "🇬🇧",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 2203,
+    "localResponseTime": 3683,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 6147
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 1218
+        }
+      ],
+      "latency": 3683
     },
     "riskScore": 34.1,
     "riskLevel": "high",
@@ -2384,7 +1880,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:32:15.762Z",
+    "checkedAt": "2026-07-02T22:34:20.069Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -2407,8 +1903,8 @@
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 1560,
-    "localResponseTime": 178,
+    "responseTime": 1287,
+    "localResponseTime": 269,
     "local": {
       "ok": true,
       "required": 2,
@@ -2418,16 +1914,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 232
+          "latency": 335
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 123
+          "latency": 202
         }
       ],
-      "latency": 178
+      "latency": 269
     },
     "riskScore": 34.35,
     "riskLevel": "high",
@@ -2460,31 +1956,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:09.033Z",
+    "checkedAt": "2026-07-02T22:27:14.831Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.230:5998",
+    "proxy": "socks5://102.217.190.157:7080",
     "protocol": "socks5",
-    "ip": "206.123.156.230",
-    "port": 5998,
-    "clientIp": "8.217.108.67",
-    "country": "HK",
-    "city": "Hong Kong",
-    "asn": "45102",
-    "asOrganization": "Alibaba (US) Technology Co., Ltd.",
-    "latitude": 22.28552,
-    "longitude": 114.15769,
-    "country_cn": "Hong Kong",
-    "country_en": "Hong Kong",
-    "country_emoji": "🇭🇰",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 5350,
-    "localResponseTime": 3663,
+    "ip": "102.217.190.157",
+    "port": 7080,
+    "clientIp": "102.217.190.157",
+    "country": "ZA",
+    "city": "Cape Town",
+    "asn": "328970",
+    "asOrganization": "CloudGistics",
+    "latitude": -33.92555,
+    "longitude": 18.42286,
+    "country_cn": "South Africa",
+    "country_en": "South Africa",
+    "country_emoji": "🇿🇦",
+    "continent": "AF",
+    "continent_cn": "AF",
+    "continent_en": "AF",
+    "responseTime": 3831,
+    "localResponseTime": 5923,
     "local": {
       "ok": true,
       "required": 2,
@@ -2494,18 +1990,94 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2904
+          "latency": 5964
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 4421
+          "latency": 5882
         }
       ],
-      "latency": 3663
+      "latency": 5923
     },
-    "riskScore": 35.925,
+    "riskScore": 35.8,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0.3,
+      "percent": "6%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser"
+      ],
+      "riskLabel": "elevated"
+    },
+    "purityScore": 0.3,
+    "purityPercent": "6%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser"
+    ],
+    "networkType": "hosting",
+    "flags": {
+      "datacenter": false,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:30:42.496Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.233:5097",
+    "protocol": "socks5",
+    "ip": "206.123.156.233",
+    "port": 5097,
+    "clientIp": "51.222.116.95",
+    "country": "CA",
+    "city": "Montréal",
+    "asn": "16276",
+    "asOrganization": "OVH SAS",
+    "latitude": 45.5075,
+    "longitude": -73.5887,
+    "country_cn": "Canada",
+    "country_en": "Canada",
+    "country_emoji": "🇨🇦",
+    "continent": "NA",
+    "continent_cn": "NA",
+    "continent_en": "NA",
+    "responseTime": 1116,
+    "localResponseTime": 4765,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 5342
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 4188
+        }
+      ],
+      "latency": 4765
+    },
+    "riskScore": 37.125,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -2536,83 +2108,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:32.932Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://124.248.191.83:1080",
-    "protocol": "socks5",
-    "ip": "124.248.191.83",
-    "port": 1080,
-    "clientIp": "124.248.191.83",
-    "country": "KH",
-    "city": "Phnom Penh",
-    "asn": "23673",
-    "asOrganization": "COGETEL LTD.",
-    "latitude": 11.5251,
-    "longitude": 104.927,
-    "country_cn": "Cambodia",
-    "country_en": "Cambodia",
-    "country_emoji": "🇰🇭",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 2545,
-    "localResponseTime": 7507,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 7298
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 7716
-        }
-      ],
-      "latency": 7507
-    },
-    "riskScore": 36.525,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "isp",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:28:14.681Z",
+    "checkedAt": "2026-07-02T22:35:13.119Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -2635,8 +2131,8 @@
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 2000,
-    "localResponseTime": 3291,
+    "responseTime": 2012,
+    "localResponseTime": 1829,
     "local": {
       "ok": true,
       "required": 2,
@@ -2646,16 +2142,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 5238
+          "latency": 1429
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1344
+          "latency": 2228
         }
       ],
-      "latency": 3291
+      "latency": 1829
     },
     "riskScore": 37.4,
     "riskLevel": "high",
@@ -2688,83 +2184,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:15.657Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://203.189.135.73:1080",
-    "protocol": "socks5",
-    "ip": "203.189.135.73",
-    "port": 1080,
-    "clientIp": "203.189.135.73",
-    "country": "KH",
-    "city": "Phnom Penh",
-    "asn": "23673",
-    "asOrganization": "COGETEL LTD.",
-    "latitude": 11.5625,
-    "longitude": 104.916,
-    "country_cn": "Cambodia",
-    "country_en": "Cambodia",
-    "country_emoji": "🇰🇭",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 2487,
-    "localResponseTime": 3842,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4077
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3607
-        }
-      ],
-      "latency": 3842
-    },
-    "riskScore": 37.5,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "isp",
-    "flags": {
-      "datacenter": false,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:34:16.272Z",
+    "checkedAt": "2026-07-02T22:27:22.028Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -2787,8 +2207,8 @@
     "continent": "NA",
     "continent_cn": "NA",
     "continent_en": "NA",
-    "responseTime": 770,
-    "localResponseTime": 3289,
+    "responseTime": 818,
+    "localResponseTime": 1498,
     "local": {
       "ok": true,
       "required": 2,
@@ -2798,16 +2218,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3670
+          "latency": 1814
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2908
+          "latency": 1181
         }
       ],
-      "latency": 3289
+      "latency": 1498
     },
     "riskScore": 40.025,
     "riskLevel": "high",
@@ -2840,31 +2260,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:14.891Z",
+    "checkedAt": "2026-07-02T22:27:20.210Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://37.120.189.175:1080",
+    "proxy": "socks5://206.123.156.209:9637",
     "protocol": "socks5",
-    "ip": "37.120.189.175",
-    "port": 1080,
-    "clientIp": "37.120.189.175",
+    "ip": "206.123.156.209",
+    "port": 9637,
+    "clientIp": "148.251.47.87",
     "country": "DE",
-    "city": "Nuremberg",
-    "asn": "197540",
-    "asOrganization": "netcup GmbH",
-    "latitude": 49.45421,
-    "longitude": 11.07752,
+    "city": "Falkenstein",
+    "asn": "24940",
+    "asOrganization": "Hetzner Online GmbH",
+    "latitude": 50.47788,
+    "longitude": 12.37129,
     "country_cn": "Germany",
     "country_en": "Germany",
     "country_emoji": "🇩🇪",
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 2131,
-    "localResponseTime": 2499,
+    "responseTime": 1026,
+    "localResponseTime": 5099,
     "local": {
       "ok": true,
       "required": 2,
@@ -2874,94 +2294,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3910
+          "latency": 3098
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1088
+          "latency": 7099
         }
       ],
-      "latency": 2499
+      "latency": 5099
     },
-    "riskScore": 43.925,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0.3,
-      "percent": "6%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser"
-      ],
-      "riskLabel": "elevated"
-    },
-    "purityScore": 0.3,
-    "purityPercent": "6%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:33:45.385Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.199:5784",
-    "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 5784,
-    "clientIp": "103.166.182.186",
-    "country": "VN",
-    "city": "Hanoi",
-    "asn": "135905",
-    "asOrganization": "VIETNAM POSTS AND TELECOMMUNICATIONS GROUP",
-    "latitude": 21.02441,
-    "longitude": 105.84146,
-    "country_cn": "Vietnam",
-    "country_en": "Vietnam",
-    "country_emoji": "🇻🇳",
-    "continent": "AS",
-    "continent_cn": "AS",
-    "continent_en": "AS",
-    "responseTime": 4097,
-    "localResponseTime": 4068,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4961
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3175
-        }
-      ],
-      "latency": 4068
-    },
-    "riskScore": 43.075,
+    "riskScore": 40.35,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -2984,9 +2328,9 @@
       "is_abuser",
       "risk=high"
     ],
-    "networkType": "business",
+    "networkType": "hosting",
     "flags": {
-      "datacenter": false,
+      "datacenter": true,
       "tor": false,
       "vpn": false,
       "proxy": true,
@@ -2994,7 +2338,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:29:46.378Z",
+    "checkedAt": "2026-07-02T22:31:27.088Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -3017,8 +2361,8 @@
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 1340,
-    "localResponseTime": 466,
+    "responseTime": 1405,
+    "localResponseTime": 402,
     "local": {
       "ok": true,
       "required": 2,
@@ -3028,16 +2372,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 541
+          "latency": 507
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 390
+          "latency": 297
         }
       ],
-      "latency": 466
+      "latency": 402
     },
     "riskScore": 43.15,
     "riskLevel": "high",
@@ -3072,7 +2416,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:10.197Z",
+    "checkedAt": "2026-07-02T22:27:18.690Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -3095,8 +2439,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 138,
-    "localResponseTime": 3410,
+    "responseTime": 81,
+    "localResponseTime": 1917,
     "local": {
       "ok": true,
       "required": 2,
@@ -3106,16 +2450,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 4037
+          "latency": 2456
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2782
+          "latency": 1377
         }
       ],
-      "latency": 3410
+      "latency": 1917
     },
     "riskScore": 44.15,
     "riskLevel": "high",
@@ -3150,7 +2494,85 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:15.564Z",
+    "checkedAt": "2026-07-02T22:27:20.404Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://37.120.189.175:1080",
+    "protocol": "socks5",
+    "ip": "37.120.189.175",
+    "port": 1080,
+    "clientIp": "37.120.189.175",
+    "country": "DE",
+    "city": "Nuremberg",
+    "asn": "197540",
+    "asOrganization": "netcup GmbH",
+    "latitude": 49.45421,
+    "longitude": 11.07752,
+    "country_cn": "Germany",
+    "country_en": "Germany",
+    "country_emoji": "🇩🇪",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 133,
+    "localResponseTime": 1435,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 1739
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 1131
+        }
+      ],
+      "latency": 1435
+    },
+    "riskScore": 44.225,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0,
+      "percent": "0%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser",
+        "risk=high"
+      ],
+      "riskLabel": "high"
+    },
+    "purityScore": 0,
+    "purityPercent": "0%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser",
+      "risk=high"
+    ],
+    "networkType": "hosting",
+    "flags": {
+      "datacenter": true,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:27:19.409Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -3173,8 +2595,8 @@
     "continent": "NA",
     "continent_cn": "NA",
     "continent_en": "NA",
-    "responseTime": 3903,
-    "localResponseTime": 4433,
+    "responseTime": 8108,
+    "localResponseTime": 3799,
     "local": {
       "ok": true,
       "required": 2,
@@ -3184,16 +2606,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 7361
+          "latency": 3022
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1505
+          "latency": 4576
         }
       ],
-      "latency": 4433
+      "latency": 3799
     },
     "riskScore": 44.5,
     "riskLevel": "high",
@@ -3228,21 +2650,21 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:21.097Z",
+    "checkedAt": "2026-07-02T22:27:32.255Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://45.43.63.37:10808",
+    "proxy": "socks5://183.173.254.61:6382",
     "protocol": "socks5",
-    "ip": "45.43.63.37",
-    "port": 10808,
-    "clientIp": "45.43.63.37",
+    "ip": "183.173.254.61",
+    "port": 6382,
+    "clientIp": "188.253.120.136",
     "country": "SG",
     "city": "Singapore",
-    "asn": "135377",
-    "asOrganization": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+    "asn": "38136",
+    "asOrganization": "Akari Networks Limited",
     "latitude": 1.28967,
     "longitude": 103.85007,
     "country_cn": "Singapore",
@@ -3251,8 +2673,8 @@
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 4071,
-    "localResponseTime": 5301,
+    "responseTime": 7233,
+    "localResponseTime": 1251,
     "local": {
       "ok": true,
       "required": 2,
@@ -3262,18 +2684,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3784
+          "latency": 1485
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 6817
+          "latency": 1016
         }
       ],
-      "latency": 5301
+      "latency": 1251
     },
-    "riskScore": 55.425,
+    "riskScore": 53.975,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -3306,31 +2728,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:33.537Z",
+    "checkedAt": "2026-07-02T22:34:05.646Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://212.87.198.96:1080",
+    "proxy": "socks5://103.75.118.84:1080",
     "protocol": "socks5",
-    "ip": "212.87.198.96",
+    "ip": "103.75.118.84",
     "port": 1080,
-    "clientIp": "212.87.198.96",
-    "country": "TR",
-    "city": "Istanbul",
-    "asn": "44620",
-    "asOrganization": "Netlen Internet Hizmetleri Ltd. Sti.",
-    "latitude": 41.01384,
-    "longitude": 28.94966,
-    "country_cn": "Turkey",
-    "country_en": "Turkey",
-    "country_emoji": "🇹🇷",
+    "clientIp": "103.75.118.84",
+    "country": "JP",
+    "city": "Yonakuni",
+    "asn": "136258",
+    "asOrganization": "BrainStorm Network, Inc",
+    "latitude": 24.44313,
+    "longitude": 122.98111,
+    "country_cn": "Japan",
+    "country_en": "Japan",
+    "country_emoji": "🇯🇵",
     "continent": "AS",
     "continent_cn": "AS",
     "continent_en": "AS",
-    "responseTime": 475,
-    "localResponseTime": 2256,
+    "responseTime": 1612,
+    "localResponseTime": 1418,
     "local": {
       "ok": true,
       "required": 2,
@@ -3340,18 +2762,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3038
+          "latency": 1553
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1473
+          "latency": 1283
         }
       ],
-      "latency": 2256
+      "latency": 1418
     },
-    "riskScore": 57.675,
+    "riskScore": 58.9,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -3374,7 +2796,7 @@
       "is_abuser",
       "risk=high"
     ],
-    "networkType": "isp",
+    "networkType": "business",
     "flags": {
       "datacenter": true,
       "tor": false,
@@ -3384,7 +2806,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:18.057Z",
+    "checkedAt": "2026-07-02T22:28:42.481Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -3407,8 +2829,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 99,
-    "localResponseTime": 1892,
+    "responseTime": 87,
+    "localResponseTime": 1464,
     "local": {
       "ok": true,
       "required": 2,
@@ -3418,16 +2840,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2648
+          "latency": 1764
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1136
+          "latency": 1163
         }
       ],
-      "latency": 1892
+      "latency": 1464
     },
     "riskScore": 59.4,
     "riskLevel": "high",
@@ -3462,7 +2884,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:16.562Z",
+    "checkedAt": "2026-07-02T22:27:20.814Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -3485,8 +2907,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 109,
-    "localResponseTime": 2411,
+    "responseTime": 90,
+    "localResponseTime": 1572,
     "local": {
       "ok": true,
       "required": 2,
@@ -3496,18 +2918,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2590
+          "latency": 1902
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2231
+          "latency": 1241
         }
       ],
-      "latency": 2411
+      "latency": 1572
     },
-    "riskScore": 60.45,
+    "riskScore": 59.4,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -3540,31 +2962,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:15.349Z",
+    "checkedAt": "2026-07-02T22:27:21.550Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.209:8325",
+    "proxy": "socks5://165.154.227.39:1080",
     "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 8325,
-    "clientIp": "78.142.18.172",
-    "country": "NL",
-    "city": "Heerlen",
-    "asn": "213438",
-    "asOrganization": "ColocaTel Inc.",
-    "latitude": 50.88388,
-    "longitude": 5.9826,
-    "country_cn": "The Netherlands",
-    "country_en": "The Netherlands",
-    "country_emoji": "🇳🇱",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 1466,
-    "localResponseTime": 1784,
+    "ip": "165.154.227.39",
+    "port": 1080,
+    "clientIp": "165.154.227.39",
+    "country": "TW",
+    "city": "Taipei",
+    "asn": "142002",
+    "asOrganization": "Scloud Pte Ltd",
+    "latitude": 25.03817,
+    "longitude": 121.5636,
+    "country_cn": "Taiwan",
+    "country_en": "Taiwan",
+    "country_emoji": "🇹🇼",
+    "continent": "AS",
+    "continent_cn": "AS",
+    "continent_en": "AS",
+    "responseTime": 1530,
+    "localResponseTime": 2356,
     "local": {
       "ok": true,
       "required": 2,
@@ -3574,18 +2996,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2463
+          "latency": 3022
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1104
+          "latency": 1690
         }
       ],
-      "latency": 1784
+      "latency": 2356
     },
-    "riskScore": 70.65,
+    "riskScore": 64.925,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -3618,163 +3040,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:30:11.309Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.209:5788",
-    "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 5788,
-    "clientIp": "78.142.18.172",
-    "country": "NL",
-    "city": "Heerlen",
-    "asn": "213438",
-    "asOrganization": "ColocaTel Inc.",
-    "latitude": 50.88388,
-    "longitude": 5.9826,
-    "country_cn": "The Netherlands",
-    "country_en": "The Netherlands",
-    "country_emoji": "🇳🇱",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 222,
-    "localResponseTime": 2260,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 3263
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 1257
-        }
-      ],
-      "latency": 2260
-    },
-    "riskScore": 70.65,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0,
-      "percent": "0%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser",
-        "risk=high"
-      ],
-      "riskLabel": "high"
-    },
-    "purityScore": 0,
-    "purityPercent": "0%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser",
-      "risk=high"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:29:07.005Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.233:9812",
-    "protocol": "socks5",
-    "ip": "206.123.156.233",
-    "port": 9812,
-    "clientIp": "78.142.18.172",
-    "country": "NL",
-    "city": "Heerlen",
-    "asn": "213438",
-    "asOrganization": "ColocaTel Inc.",
-    "latitude": 50.88388,
-    "longitude": 5.9826,
-    "country_cn": "The Netherlands",
-    "country_en": "The Netherlands",
-    "country_emoji": "🇳🇱",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 434,
-    "localResponseTime": 3333,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 3362
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3303
-        }
-      ],
-      "latency": 3333
-    },
-    "riskScore": 70.65,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0,
-      "percent": "0%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser",
-        "risk=high"
-      ],
-      "riskLabel": "high"
-    },
-    "purityScore": 0,
-    "purityPercent": "0%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser",
-      "risk=high"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:25:20.213Z",
+    "checkedAt": "2026-07-02T22:33:48.735Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -3797,8 +3063,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 303,
-    "localResponseTime": 2388,
+    "responseTime": 974,
+    "localResponseTime": 1811,
     "local": {
       "ok": true,
       "required": 2,
@@ -3808,18 +3074,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 2257
+          "latency": 1843
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 2518
+          "latency": 1779
         }
       ],
-      "latency": 2388
+      "latency": 1811
     },
-    "riskScore": 70.75,
+    "riskScore": 70.65,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -3852,16 +3118,16 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:32:03.783Z",
+    "checkedAt": "2026-07-02T22:27:25.618Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.209:7453",
+    "proxy": "socks5://206.123.156.233:4670",
     "protocol": "socks5",
-    "ip": "206.123.156.209",
-    "port": 7453,
+    "ip": "206.123.156.233",
+    "port": 4670,
     "clientIp": "78.142.18.172",
     "country": "NL",
     "city": "Heerlen",
@@ -3875,8 +3141,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 4632,
-    "localResponseTime": 3040,
+    "responseTime": 1281,
+    "localResponseTime": 3302,
     "local": {
       "ok": true,
       "required": 2,
@@ -3886,18 +3152,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 4871
+          "latency": 2727
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1208
+          "latency": 3876
         }
       ],
-      "latency": 3040
+      "latency": 3302
     },
-    "riskScore": 70.75,
+    "riskScore": 70.65,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -3930,187 +3196,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:33:33.892Z",
+    "checkedAt": "2026-07-02T22:29:49.304Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://206.123.156.199:7511",
-    "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 7511,
-    "clientIp": "78.142.18.172",
-    "country": "NL",
-    "city": "Heerlen",
-    "asn": "213438",
-    "asOrganization": "ColocaTel Inc.",
-    "latitude": 50.88388,
-    "longitude": 5.9826,
-    "country_cn": "The Netherlands",
-    "country_en": "The Netherlands",
-    "country_emoji": "🇳🇱",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 182,
-    "localResponseTime": 3041,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4220
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 1861
-        }
-      ],
-      "latency": 3041
-    },
-    "riskScore": 70.75,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0,
-      "percent": "0%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser",
-        "risk=high"
-      ],
-      "riskLabel": "high"
-    },
-    "purityScore": 0,
-    "purityPercent": "0%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser",
-      "risk=high"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:29:02.797Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.199:7707",
-    "protocol": "socks5",
-    "ip": "206.123.156.199",
-    "port": 7707,
-    "clientIp": "78.142.18.172",
-    "country": "NL",
-    "city": "Heerlen",
-    "asn": "213438",
-    "asOrganization": "ColocaTel Inc.",
-    "latitude": 50.88388,
-    "longitude": 5.9826,
-    "country_cn": "The Netherlands",
-    "country_en": "The Netherlands",
-    "country_emoji": "🇳🇱",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 2560,
-    "localResponseTime": 3755,
-    "local": {
-      "ok": true,
-      "required": 2,
-      "successes": 2,
-      "tests": [
-        {
-          "url": "https://www.gstatic.com/generate_204",
-          "ok": true,
-          "status": 204,
-          "latency": 4165
-        },
-        {
-          "url": "https://www.cloudflare.com/cdn-cgi/trace",
-          "ok": true,
-          "status": 200,
-          "latency": 3345
-        }
-      ],
-      "latency": 3755
-    },
-    "riskScore": 70.75,
-    "riskLevel": "high",
-    "purity": {
-      "status": "dirty",
-      "score": 0,
-      "percent": "0%",
-      "level": "extreme_risk",
-      "reasons": [
-        "is_proxy",
-        "is_abuser",
-        "risk=high"
-      ],
-      "riskLabel": "high"
-    },
-    "purityScore": 0,
-    "purityPercent": "0%",
-    "purityStatus": "dirty",
-    "purityLevel": "extreme_risk",
-    "purityReasons": [
-      "is_proxy",
-      "is_abuser",
-      "risk=high"
-    ],
-    "networkType": "hosting",
-    "flags": {
-      "datacenter": true,
-      "tor": false,
-      "vpn": false,
-      "proxy": true,
-      "abuser": true,
-      "crawler": false,
-      "bogon": false
-    },
-    "checkedAt": "2026-07-02T16:30:20.997Z",
-    "remotelyUsable": true,
-    "locallyUsable": true,
-    "success": true
-  },
-  {
-    "proxy": "socks5://206.123.156.212:5443",
+    "proxy": "socks5://206.123.156.212:7876",
     "protocol": "socks5",
     "ip": "206.123.156.212",
-    "port": 5443,
-    "clientIp": "139.59.184.99",
-    "country": "GB",
-    "city": "London",
-    "asn": "14061",
-    "asOrganization": "DigitalOcean, LLC",
-    "latitude": 51.50853,
-    "longitude": -0.12574,
-    "country_cn": "United Kingdom",
-    "country_en": "United Kingdom",
-    "country_emoji": "🇬🇧",
+    "port": 7876,
+    "clientIp": "78.142.18.172",
+    "country": "NL",
+    "city": "Heerlen",
+    "asn": "213438",
+    "asOrganization": "ColocaTel Inc.",
+    "latitude": 50.88388,
+    "longitude": 5.9826,
+    "country_cn": "The Netherlands",
+    "country_en": "The Netherlands",
+    "country_emoji": "🇳🇱",
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 468,
-    "localResponseTime": 3511,
+    "responseTime": 171,
+    "localResponseTime": 4920,
     "local": {
       "ok": true,
       "required": 2,
@@ -4120,18 +3230,18 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3695
+          "latency": 4393
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 3327
+          "latency": 5446
         }
       ],
-      "latency": 3511
+      "latency": 4920
     },
-    "riskScore": 75.425,
+    "riskScore": 70.65,
     "riskLevel": "high",
     "purity": {
       "status": "dirty",
@@ -4164,7 +3274,85 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:31:46.180Z",
+    "checkedAt": "2026-07-02T22:34:48.537Z",
+    "remotelyUsable": true,
+    "locallyUsable": true,
+    "success": true
+  },
+  {
+    "proxy": "socks5://206.123.156.209:8325",
+    "protocol": "socks5",
+    "ip": "206.123.156.209",
+    "port": 8325,
+    "clientIp": "78.142.18.172",
+    "country": "NL",
+    "city": "Heerlen",
+    "asn": "213438",
+    "asOrganization": "ColocaTel Inc.",
+    "latitude": 50.88388,
+    "longitude": 5.9826,
+    "country_cn": "The Netherlands",
+    "country_en": "The Netherlands",
+    "country_emoji": "🇳🇱",
+    "continent": "EU",
+    "continent_cn": "EU",
+    "continent_en": "EU",
+    "responseTime": 1806,
+    "localResponseTime": 1753,
+    "local": {
+      "ok": true,
+      "required": 2,
+      "successes": 2,
+      "tests": [
+        {
+          "url": "https://www.gstatic.com/generate_204",
+          "ok": true,
+          "status": 204,
+          "latency": 2126
+        },
+        {
+          "url": "https://www.cloudflare.com/cdn-cgi/trace",
+          "ok": true,
+          "status": 200,
+          "latency": 1380
+        }
+      ],
+      "latency": 1753
+    },
+    "riskScore": 70.75,
+    "riskLevel": "high",
+    "purity": {
+      "status": "dirty",
+      "score": 0,
+      "percent": "0%",
+      "level": "extreme_risk",
+      "reasons": [
+        "is_proxy",
+        "is_abuser",
+        "risk=high"
+      ],
+      "riskLabel": "high"
+    },
+    "purityScore": 0,
+    "purityPercent": "0%",
+    "purityStatus": "dirty",
+    "purityLevel": "extreme_risk",
+    "purityReasons": [
+      "is_proxy",
+      "is_abuser",
+      "risk=high"
+    ],
+    "networkType": "hosting",
+    "flags": {
+      "datacenter": true,
+      "tor": false,
+      "vpn": false,
+      "proxy": true,
+      "abuser": true,
+      "crawler": false,
+      "bogon": false
+    },
+    "checkedAt": "2026-07-02T22:27:24.835Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
@@ -4187,8 +3375,8 @@
     "continent": "EU",
     "continent_cn": "EU",
     "continent_en": "EU",
-    "responseTime": 1150,
-    "localResponseTime": 3310,
+    "responseTime": 91,
+    "localResponseTime": 1540,
     "local": {
       "ok": true,
       "required": 2,
@@ -4198,16 +3386,16 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 4967
+          "latency": 1869
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1653
+          "latency": 1211
         }
       ],
-      "latency": 3310
+      "latency": 1540
     },
     "riskScore": 76.975,
     "riskLevel": "high",
@@ -4242,31 +3430,31 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:25:22.503Z",
+    "checkedAt": "2026-07-02T22:27:27.012Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
   },
   {
-    "proxy": "socks5://45.144.49.156:1080",
+    "proxy": "socks5://13.140.164.179:3211",
     "protocol": "socks5",
-    "ip": "45.144.49.156",
-    "port": 1080,
-    "clientIp": "45.144.49.156",
-    "country": "PL",
-    "city": "Warsaw",
-    "asn": "49791",
-    "asOrganization": "Newserverlife LLC",
-    "latitude": 52.22977,
-    "longitude": 21.01178,
-    "country_cn": "Poland",
-    "country_en": "Poland",
-    "country_emoji": "🇵🇱",
-    "continent": "EU",
-    "continent_cn": "EU",
-    "continent_en": "EU",
-    "responseTime": 372,
-    "localResponseTime": 2561,
+    "ip": "13.140.164.179",
+    "port": 3211,
+    "clientIp": "185.223.152.52",
+    "country": "US",
+    "city": "Los Angeles",
+    "asn": "396356",
+    "asOrganization": "Latitude.sh",
+    "latitude": 34.05223,
+    "longitude": -118.24368,
+    "country_cn": "United States",
+    "country_en": "United States",
+    "country_emoji": "🇺🇸",
+    "continent": "NA",
+    "continent_cn": "NA",
+    "continent_en": "NA",
+    "responseTime": 7135,
+    "localResponseTime": 4751,
     "local": {
       "ok": true,
       "required": 2,
@@ -4276,19 +3464,19 @@
           "url": "https://www.gstatic.com/generate_204",
           "ok": true,
           "status": 204,
-          "latency": 3471
+          "latency": 6061
         },
         {
           "url": "https://www.cloudflare.com/cdn-cgi/trace",
           "ok": true,
           "status": 200,
-          "latency": 1651
+          "latency": 3441
         }
       ],
-      "latency": 2561
+      "latency": 4751
     },
-    "riskScore": 82.925,
-    "riskLevel": "high",
+    "riskScore": 166.4,
+    "riskLevel": "critical",
     "purity": {
       "status": "dirty",
       "score": 0,
@@ -4298,9 +3486,9 @@
         "is_proxy",
         "is_vpn",
         "is_abuser",
-        "risk=high"
+        "risk=very high"
       ],
-      "riskLabel": "high"
+      "riskLabel": "very high"
     },
     "purityScore": 0,
     "purityPercent": "0%",
@@ -4310,7 +3498,7 @@
       "is_proxy",
       "is_vpn",
       "is_abuser",
-      "risk=high"
+      "risk=very high"
     ],
     "networkType": "hosting",
     "flags": {
@@ -4322,7 +3510,7 @@
       "crawler": false,
       "bogon": false
     },
-    "checkedAt": "2026-07-02T16:31:24.510Z",
+    "checkedAt": "2026-07-02T22:32:16.305Z",
     "remotelyUsable": true,
     "locallyUsable": true,
     "success": true
