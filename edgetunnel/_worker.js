@@ -64,7 +64,9 @@ export default {
 			if (!管理员密码) return fetch(Pages静态页面 + '/noADMIN').then(r => { const headers = new Headers(r.headers); headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate'); headers.set('Pragma', 'no-cache'); headers.set('Expires', '0'); return new Response(r.body, { status: 404, statusText: r.statusText, headers }) });
 			if (env.KV && typeof env.KV.get === 'function') {
 				const 区分大小写访问路径 = url.pathname.slice(1);
-				if (区分大小写访问路径 === 加密秘钥 && 加密秘钥 !== '勿动此默认密钥，有需求请自行通过添加变量KEY进行修改') {//快速订阅
+				if (访问路径 === 'admin/autofill-socks5.js') {
+					return new Response("console.log('best SOCKS5 autofill is bundled in /admin HTML; version=e9ef824+retry');\n", { status: 200, headers: { 'Content-Type': 'application/javascript;charset=utf-8', 'Cache-Control': 'no-store' } });
+				} else if (区分大小写访问路径 === 加密秘钥 && 加密秘钥 !== '勿动此默认密钥，有需求请自行通过添加变量KEY进行修改') {//快速订阅
 					const params = new URLSearchParams(url.search);
 					params.set('token', await MD5MD5(host + userID));
 					return new Response('重定向中...', { status: 302, headers: { 'Location': `/sub?${params.toString()}` } });
@@ -273,8 +275,6 @@ export default {
 						return new Response(本地优选IP, { status: 200, headers: { 'Content-Type': 'text/plain;charset=utf-8', 'asn': request.cf.asn } });
 					} else if (访问路径 === 'admin/cf.json') {// CF配置文件
 						return new Response(JSON.stringify(request.cf, null, 2), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
-					} else if (访问路径 === 'admin/autofill-socks5.js') {
-						return new Response("console.log('best SOCKS5 autofill is bundled in /admin HTML');\n", { status: 200, headers: { 'Content-Type': 'application/javascript;charset=utf-8', 'Cache-Control': 'no-store' } });
 					}
 
 					ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Admin_Login', config_JSON));
@@ -289,7 +289,7 @@ export default {
 <script data-cfasync="false">
 (() => {
 	const BEST_SOCKS5_LIST_URL = ${JSON.stringify(列表URL.href)};
-	const AUTO_FILL_KEY = 'best-socks5-autofill-v1';
+	const AUTO_FILL_VERSION = 'best-socks5-autofill-retry-v2';
 
 	const waitForElement = (id, timeout = 10000) => new Promise((resolve, reject) => {
 		const startedAt = Date.now();
@@ -342,10 +342,11 @@ export default {
 		if (window.showToast) window.showToast(text, type === 'error' ? 'error' : 'success');
 	};
 
-	async function fillBestSocks5() {
+	async function fillBestSocks5(options = {}) {
 		const proxyMode = await waitForElement('proxyMode');
 		const proxyProtocol = await waitForElement('proxyProtocol');
 		const socks5Addr = await waitForElement('socks5Addr');
+		if (options.skipIfFilled && String(socks5Addr.value || '').trim()) return null;
 		setStatus('正在获取最优 SOCKS5...', 'info');
 
 		const response = await fetch(BEST_SOCKS5_LIST_URL, { cache: 'no-store' });
@@ -388,7 +389,7 @@ export default {
 		button.style.cssText = (anchor.getAttribute('style') || '') + ';display:inline-block;padding:10px 16px;';
 		button.title = '从 SOCKS5 列表中选择纯净度最高、同分延迟最低的节点，只填入不保存';
 		button.textContent = '⚡ 填入最优 SOCKS5';
-		button.addEventListener('click', () => fillBestSocks5().catch((error) => setStatus('自动填入失败：' + error.message, 'error')));
+		button.addEventListener('click', () => fillBestSocks5({ force: true }).catch((error) => setStatus('自动填入失败：' + error.message, 'error')));
 		anchor.parentElement.insertBefore(button, anchor.nextSibling);
 
 		const status = document.createElement('div');
@@ -400,10 +401,13 @@ export default {
 	async function boot() {
 		try {
 			installButton();
-			if (sessionStorage.getItem(AUTO_FILL_KEY) !== location.href) {
-				sessionStorage.setItem(AUTO_FILL_KEY, location.href);
-				await fillBestSocks5();
-			}
+			window.fillBestSocks5 = fillBestSocks5;
+			console.info('[best-socks5-autofill]', AUTO_FILL_VERSION, BEST_SOCKS5_LIST_URL);
+			[1500, 4000, 8000].forEach((delay) => {
+				setTimeout(() => {
+					fillBestSocks5({ force: true }).catch((error) => setStatus('自动填入失败：' + error.message, 'error'));
+				}, delay);
+			});
 		} catch (error) {
 			setStatus('自动填入失败：' + error.message, 'error');
 		}
