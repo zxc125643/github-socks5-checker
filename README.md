@@ -49,6 +49,14 @@ Purity is scored from 0 to 5. Bogon, Tor, proxy, VPN, abuser flags, and high com
 
 `data/socks5.json` and `data/socks5.txt` publish clean preferred nodes first. If no clean nodes survive, the default is to publish locally usable fallback nodes with their dirty/warning purity labels instead of pretending they are clean. Set `PUBLISH_ONLY_CLEAN=true` to publish only clean nodes; set `RETAIN_PREVIOUS_ON_EMPTY=true` only if you intentionally want to keep the previous list when a run finds no publishable nodes.
 
+`data/socks5.txt` is an annotated human-readable list:
+
+```text
+socks5://206.123.156.209:4436 #🇨🇦 Canada CA /clean 5/5 100% /3175ms
+```
+
+Use `data/socks5.json` for integrations that need structured fields.
+
 `data/status.json` records how many candidates failed at the checker step, how many failed local validation, and a summary of purity statuses.
 
 Public free proxies are untrusted. Never send credentials, private traffic, payment data, or other sensitive information through them.

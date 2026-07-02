@@ -296,6 +296,37 @@ function countryEmoji(code) {
   return String.fromCodePoint(...[...value].map((char) => 127397 + char.charCodeAt(0)));
 }
 
+function uniqueParts(values) {
+  const seen = new Set();
+  return values
+    .map((value) => String(value || "").trim())
+    .filter(Boolean)
+    .filter((value) => {
+      const key = value.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+function formatTextLine(item) {
+  const region = uniqueParts([
+    item.country_emoji,
+    item.country_cn || item.country_en,
+    item.country,
+  ]).join(" ") || "unknown";
+  const score = Number.isFinite(item.purityScore) ? `${item.purityScore}/5` : "unknown";
+  const purity = uniqueParts([
+    item.purityStatus,
+    score,
+    item.purityPercent,
+  ]).join(" ");
+  const latency = Number.isFinite(item.localResponseTime)
+    ? `${item.localResponseTime}ms`
+    : `${item.responseTime || "unknown"}ms`;
+  return `${item.proxy} #${region} /${purity || "unknown"} /${latency}`;
+}
+
 async function testHttpThroughProxy(proxy, target) {
   const startedAt = Date.now();
   const timeoutSeconds = Math.max(1, Math.ceil(LOCAL_TIMEOUT_MS / 1000));
@@ -545,7 +576,7 @@ const puritySummary = countBy(successful, (item) => item.purityStatus || "unknow
 
 await mkdir("data", { recursive: true });
 await writeFile("data/socks5.json", `${JSON.stringify(selected, null, 2)}\n`);
-await writeFile("data/socks5.txt", `${selected.map((item) => item.proxy).join("\n")}${selected.length ? "\n" : ""}`);
+await writeFile("data/socks5.txt", `${selected.map(formatTextLine).join("\n")}${selected.length ? "\n" : ""}`);
 await writeFile("data/results.json", `${JSON.stringify(successful, null, 2)}\n`);
 await writeFile("data/status.json", `${JSON.stringify({
   updatedAt: new Date().toISOString(),
