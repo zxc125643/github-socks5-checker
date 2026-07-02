@@ -284,7 +284,141 @@ export default {
 						if (列表URL.protocol !== 'https:') throw new Error('SOCKS5_LIST_URL must use HTTPS');
 						const 管理页面内容 = await 管理页面响应.text();
 						const 默认SOCKS5列表URL = 'https://raw.githubusercontent.com/EDT-Pages/Proxy-List/main/data/socks5.json';
-						const 已替换管理页面 = 管理页面内容.replaceAll(默认SOCKS5列表URL, 列表URL.href);
+						const 自动填入SOCKS5脚本 = `
+<script data-cfasync="false">
+(() => {
+	const BEST_SOCKS5_LIST_URL = ${JSON.stringify(列表URL.href)};
+	const AUTO_FILL_KEY = 'best-socks5-autofill-v1';
+
+	const waitForElement = (id, timeout = 10000) => new Promise((resolve, reject) => {
+		const startedAt = Date.now();
+		const timer = setInterval(() => {
+			const element = document.getElementById(id);
+			if (element) {
+				clearInterval(timer);
+				resolve(element);
+			} else if (Date.now() - startedAt > timeout) {
+				clearInterval(timer);
+				reject(new Error('未找到控件: ' + id));
+			}
+		}, 250);
+	});
+
+	const normalizeProxyAddress = (node) => {
+		const value = String(node?.proxy || '').trim();
+		if (value) return value.replace(/^socks5:\\/\\//i, '').split('#')[0].trim();
+		if (node?.ip && node?.port) return String(node.ip).trim() + ':' + String(node.port).trim();
+		return '';
+	};
+
+	const scoreNode = (node) => ({
+		purity: Number.isFinite(node?.purityScore) ? node.purityScore : -1,
+		latency: Number.isFinite(node?.localResponseTime) ? node.localResponseTime : (Number.isFinite(node?.responseTime) ? node.responseTime : 999999),
+		clean: node?.purityStatus === 'clean' ? 1 : 0,
+	});
+
+	const chooseBestNode = (nodes) => nodes
+		.filter((node) => node && node.locallyUsable !== false && normalizeProxyAddress(node))
+		.sort((a, b) => {
+			const left = scoreNode(a);
+			const right = scoreNode(b);
+			return right.clean - left.clean || right.purity - left.purity || left.latency - right.latency;
+		})[0];
+
+	const setControlValue = (element, value) => {
+		if (!element) return;
+		element.value = value;
+		element.dispatchEvent(new Event('input', { bubbles: true }));
+		element.dispatchEvent(new Event('change', { bubbles: true }));
+	};
+
+	const setStatus = (text, type = 'info') => {
+		const status = document.getElementById('bestSocks5AutoFillStatus');
+		if (status) {
+			status.textContent = text;
+			status.style.color = type === 'error' ? '#dc2626' : (type === 'success' ? '#16a34a' : '#64748b');
+		}
+		if (window.showToast) window.showToast(text, type === 'error' ? 'error' : 'success');
+	};
+
+	async function fillBestSocks5() {
+		const proxyMode = await waitForElement('proxyMode');
+		const proxyProtocol = await waitForElement('proxyProtocol');
+		const socks5Addr = await waitForElement('socks5Addr');
+		setStatus('正在获取最优 SOCKS5...', 'info');
+
+		const response = await fetch(BEST_SOCKS5_LIST_URL, { cache: 'no-store' });
+		if (!response.ok) throw new Error('列表获取失败: HTTP ' + response.status);
+		const nodes = await response.json();
+		if (!Array.isArray(nodes) || !nodes.length) throw new Error('列表为空');
+
+		const best = chooseBestNode(nodes);
+		const address = normalizeProxyAddress(best);
+		if (!best || !address) throw new Error('未找到可用 SOCKS5');
+
+		setControlValue(proxyMode, 'other');
+		if (window.updateProxyMode) window.updateProxyMode(false, false);
+		setControlValue(proxyProtocol, 'socks5');
+		if (window.updateProxyProtocol) window.updateProxyProtocol(false);
+		if (window.updateProxyMode) window.updateProxyMode(false, false);
+		setControlValue(socks5Addr, address);
+		if (window.markModified) window.markModified('proxy');
+
+		const label = [
+			best.country_emoji,
+			best.country_cn || best.country_en || best.country,
+			best.purityStatus || 'unknown',
+			(Number.isFinite(best.purityScore) ? best.purityScore + '/5' : ''),
+			best.purityPercent || '',
+			(Number.isFinite(best.localResponseTime) ? best.localResponseTime + 'ms' : '')
+		].filter(Boolean).join(' ');
+		setStatus('已填入最优 SOCKS5：' + address + ' # ' + label + '，请确认后手动保存。', 'success');
+		return best;
+	}
+
+	function installButton() {
+		if (document.getElementById('bestSocks5AutoFillBtn')) return;
+		const anchor = document.getElementById('exploreSocks5Btn') || document.getElementById('saveProxyBtn');
+		if (!anchor?.parentElement) return;
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.id = 'bestSocks5AutoFillBtn';
+		button.className = anchor.className || 'btn';
+		button.style.cssText = (anchor.getAttribute('style') || '') + ';display:inline-block;padding:10px 16px;';
+		button.title = '从 SOCKS5 列表中选择纯净度最高、同分延迟最低的节点，只填入不保存';
+		button.textContent = '⚡ 填入最优 SOCKS5';
+		button.addEventListener('click', () => fillBestSocks5().catch((error) => setStatus('自动填入失败：' + error.message, 'error')));
+		anchor.parentElement.insertBefore(button, anchor.nextSibling);
+
+		const status = document.createElement('div');
+		status.id = 'bestSocks5AutoFillStatus';
+		status.style.cssText = 'font-size:12px;line-height:1.5;margin-top:8px;color:#64748b;';
+		(anchor.closest('.module-footer') || anchor.parentElement).appendChild(status);
+	}
+
+	async function boot() {
+		try {
+			installButton();
+			if (sessionStorage.getItem(AUTO_FILL_KEY) !== location.href) {
+				sessionStorage.setItem(AUTO_FILL_KEY, location.href);
+				await fillBestSocks5();
+			}
+		} catch (error) {
+			setStatus('自动填入失败：' + error.message, 'error');
+		}
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', () => setTimeout(boot, 800));
+	} else {
+		setTimeout(boot, 800);
+	}
+})();
+</script>`;
+						let 已替换管理页面 = 管理页面内容.replaceAll(默认SOCKS5列表URL, 列表URL.href);
+						已替换管理页面 = 已替换管理页面.includes('</body>')
+							? 已替换管理页面.replace('</body>', 自动填入SOCKS5脚本 + '</body>')
+							: 已替换管理页面 + 自动填入SOCKS5脚本;
 						const 响应头 = new Headers(管理页面响应.headers);
 						响应头.set('Content-Type', 'text/html;charset=utf-8');
 						响应头.set('Cache-Control', 'no-store');
