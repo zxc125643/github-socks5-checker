@@ -273,12 +273,13 @@ export default {
 						return new Response(本地优选IP, { status: 200, headers: { 'Content-Type': 'text/plain;charset=utf-8', 'asn': request.cf.asn } });
 					} else if (访问路径 === 'admin/cf.json') {// CF配置文件
 						return new Response(JSON.stringify(request.cf, null, 2), { status: 200, headers: { 'Content-Type': 'application/json;charset=utf-8' } });
+					} else if (访问路径 === 'admin/autofill-socks5.js') {
+						return new Response("console.log('best SOCKS5 autofill is bundled in /admin HTML');\n", { status: 200, headers: { 'Content-Type': 'application/javascript;charset=utf-8', 'Cache-Control': 'no-store' } });
 					}
 
 					ctx.waitUntil(请求日志记录(env, request, 访问IP, 'Admin_Login', config_JSON));
 					const 管理页面响应 = await fetch(Pages静态页面 + '/admin' + url.search);
-					const 自定义SOCKS5列表URL = String(env.SOCKS5_LIST_URL || '').trim();
-					if (!自定义SOCKS5列表URL) return 管理页面响应;
+					const 自定义SOCKS5列表URL = String(env.SOCKS5_LIST_URL || 'https://raw.githubusercontent.com/zxc125643/github-socks5-checker/main/data/socks5.json').trim();
 					try {
 						const 列表URL = new URL(自定义SOCKS5列表URL);
 						if (列表URL.protocol !== 'https:') throw new Error('SOCKS5_LIST_URL must use HTTPS');
