@@ -1,35 +1,17 @@
 {
-  "updatedAt": "2026-07-03T10:33:29.585Z",
+  "updatedAt": "2026-07-03T16:26:18.248Z",
   "checker": "https://check.socks5.cmliussss.net",
   "sources": 4,
-  "fetched": 11747,
-  "uniqueCandidates": 7348,
+  "fetched": 9532,
+  "uniqueCandidates": 5514,
   "checked": 1200,
-  "successful": 55,
-  "remoteFailures": 940,
-  "localFailures": 205,
+  "successful": 0,
+  "remoteFailures": 1200,
+  "localFailures": 0,
   "failureReasons": {
-    "proxy request failed, cannot connect to the specified address": 266,
-    "SOCKS5 proxy connection timed out": 353,
-    "local_validation_failed": 205,
-    "SOCKS5 method selection failed": 73,
-    "SOCKS5 CONNECT timed out": 32,
-    "Proxy connection timed out": 68,
-    "Connection closed waiting for ServerHello": 13,
-    "SOCKS5 authentication negotiation timed out": 61,
-    "SOCKS5 unsupported auth method: 255": 45,
-    "Cannot call releaseLock() on a reader with outstanding read promises.": 7,
-    "Target returned no data": 1,
-    "proxy request failed, cannot connect to the specified address. It looks like you": 1,
-    "SOCKS5 connection failed: 1": 4,
-    "SOCKS5 unsupported auth method: 84": 8,
-    "SOCKS5 connection failed: 4": 3,
-    "SOCKS5 connection failed: closed": 1,
-    "SOCKS5 unsupported auth method: 104": 1,
-    "Target /ip.json did not return valid JSON": 1,
-    "checker_request_failed": 2
+    "Unexpected end of JSON input": 1200
   },
-  "preferred": 1,
+  "preferred": 0,
   "locallyValidated": true,
   "localTargets": [
     "https://www.gstatic.com/generate_204",
@@ -38,11 +20,8 @@
   "localRequiredSuccesses": 2,
   "minPurityScore": 4.2,
   "publishOnlyClean": false,
-  "purity": {
-    "clean": 1,
-    "dirty": 54
-  },
-  "clean": 1,
-  "published": 55,
+  "purity": {},
+  "clean": 0,
+  "published": 0,
   "retainedPrevious": false
 }
